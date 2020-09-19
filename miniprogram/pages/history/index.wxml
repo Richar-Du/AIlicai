@@ -1,0 +1,52 @@
+<view class="book-history">
+  <!-- 更新说明 -->
+
+  <view class="content-wrapper">
+    <text class='block item item-title'>v1.0.4</text>
+    <text class='block item'>更新日期：2019-04-26</text>
+    <text class='block item'>说明：</text>
+    <text class='block item'>1. 增加设置页面客服功能</text>
+    <text class='block item'>2. 修复获取列表数据不全的问题</text>
+    <text class='block item'>3. 修复其他已知问题</text>
+    <text class='block item'>4. 优化用户体验</text>
+  </view>
+
+  <view class="content-wrapper">
+    <text class='block item item-title'>v1.0.3</text>
+    <text class='block item'>更新日期：2019-03-26</text>
+    <text class='block item'>说明：</text>
+    <text class='block item'>1. 修复只能显示100条数据的问题</text>
+    <text class='block item'>2. 修复不继续添加默认值显示问题</text>
+    <text class='block item'>3. 修复首页授权显示的问题</text>
+    <text class='block item'>4. 修复其他已知问题</text>
+  </view>
+
+  <view class="content-wrapper">
+    <text class='block item item-title'>v1.0.2</text>
+    <text class='block item'>更新日期：2019-03-13</text>
+    <text class='block item'>说明：</text>
+    <text class='block item'>1. 修复本月剩余金额显示问题</text>
+    <text class='block item'>2. 修复不继续添加默认值显示问题</text>
+    <text class='block item'>3. 修复其他已知问题</text>
+  </view>
+
+  <view class="content-wrapper">
+    <text class='block item item-title'>v1.0.1</text>
+    <text class='block item'>更新日期：2019-02-28</text>
+    <text class='block item'>说明：</text>
+    <text class='block item'>1. 新增首页记录左滑删除功能</text>
+    <text class='block item'>2. 修复最后一天数据不显示的问题</text>
+    <text class='block item'>3. 修复首页金额显示问题</text>
+    <text class='block item'>4. 修复其他已知问题</text>
+  </view>
+
+  <view class="content-wrapper">
+    <text class='block item item-title'>v1.0.0</text>
+    <text class='block item'>更新日期：2019-02-14</text>
+    <text class='block item'>说明：</text>
+    <text class='block item'>1. 新增个人记账功能</text>
+    <text class='block item'>2. 新增本月收入与支出统计</text>
+    <text class='block item'>3. 新增问题反馈功能</text>
+    <text class='block item'>4. 新增我的小账功能说明</text>
+  </view>
+</view>

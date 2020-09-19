@@ -1,0 +1,38 @@
+/* mybook/pages/issues/index.wxss */
+.issue-list {
+  font-size: 30rpx;
+}
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.issue-item {
+  padding: 30rpx;
+  box-sizing: border-box;
+  border-bottom: 1rpx solid #ebebeb;
+}
+
+.avatar {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+
+.areabox {
+  margin: 10rpx 0;
+}
+
+.color9 {
+  color: #999;
+}
+
+.color3 {
+  color: #333;
+}
+
+.color6 {
+  color: #666;
+}

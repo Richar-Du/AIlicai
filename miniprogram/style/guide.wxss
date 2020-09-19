@@ -1,0 +1,90 @@
+page {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: rgba(240, 248, 255, 0.5);
+  font-family: PingFangSC-Regular;
+}
+
+view {
+  width: 100%;
+}
+
+button {
+  padding: 0;
+  margin: 0;
+}
+
+.block {
+  display: block;
+}
+
+.page-center {
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  text-align: center;
+}
+
+.tcenter {
+  text-align: center;
+}
+.textright {
+  text-align: right;
+}
+
+.fontblod {
+  font-weight: bold;
+}
+
+.vdivider {
+  height: 80rpx;
+  border-right: 2rpx solid #fff;
+}
+
+.width0 {
+  width: 0;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.flex0 {
+  flex: 0;
+}
+
+.flex1 {
+  flex: 1;
+}
+
+.input-item {
+  padding: 30rpx 30rpx;
+  width: auto;
+  border-bottom: 2rpx solid #ebebeb;
+}
+
+.list-item__small {
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom: 2rpx solid #ebebeb;
+  position: relative;
+  background-color: #fff;
+}
+
+.input-label {
+  color: #666;
+  margin-right: 40rpx;
+  line-height: 1.2;
+}
+
+.input-text {
+  color: #333;
+}
+
+.input-icon {
+  display: inline-block;
+  width: 40rpx;
+  height: 40rpx;
+}

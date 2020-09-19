@@ -1,0 +1,19 @@
+@import '../../style/guide.wxss';
+
+.book-history {
+}
+
+.content-wrapper {
+  font-size: 30rpx;
+  background-color: #fff;
+}
+
+.item {
+  padding: 6rpx 0 6rpx 10rpx;
+}
+
+.item-title {
+  border-bottom: 2rpx solid #ebebeb;
+  margin-left: 10rpx;
+  padding-left: 0;
+}

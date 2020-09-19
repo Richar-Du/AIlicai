@@ -1,0 +1,39 @@
+<view class="book-setting tcenter" wx:if="{{userInfo.avatarUrl}}">
+  <image class='avatar' src='{{userInfo.avatarUrl}}'></image>
+  <text class='userName tcenter'>{{userInfo.nickName}}</text>
+</view>
+<view class="book-setting tcenter" wx:else>
+  <view class='avatarBox'>
+    <open-data class='avatar avatarImg' type="userAvatarUrl"></open-data>
+  </view>
+  <open-data class='userName tcenter' type="userNickName"></open-data>
+</view>
+
+<!-- 设置区域 -->
+<view class="page-center setting-menu">
+  <view class='input-item setting-menu__item flex' bindtap="handleItem" data-name="feedback">
+    <text>问题反馈</text>
+    <image class='input-icon' src='../../images/rightarrow.png'></image>
+  </view>
+  <view class='input-item setting-menu__item flex' bindtap="handleItem" data-name="about">
+    <text>关于小账</text>
+    <image class='input-icon' src='../../images/rightarrow.png'></image>
+  </view>
+
+  <view wx:if="{{isAdmin}}" class='input-item setting-menu__item flex' bindtap="handleItem" data-name="users">
+    <text>用户列表</text>
+    <image class='input-icon' src='../../images/rightarrow.png'></image>
+  </view>
+
+  <view wx:if="{{isAdmin}}" class='input-item setting-menu__item flex' bindtap="handleItem" data-name="issues">
+    <text>反馈列表</text>
+    <image class='input-icon' src='../../images/rightarrow.png'></image>
+  </view>
+
+</view>
+
+<view class='contactBox flex'>
+  <!-- <text>联系客服</text> -->
+  <image class='contact-icon' src='../../images/img-service.png'></image>
+  <button class='btn-contact' open-type='contact'></button>
+</view>

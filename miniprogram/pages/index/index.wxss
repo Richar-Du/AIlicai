@@ -1,0 +1,35 @@
+/**index.wxss**/
+@import '../../style/guide.wxss';
+
+.logo-wrapper {
+  margin-bottom: 300rpx;
+  text-align: center;
+}
+
+.logo-wrapper .name {
+  display: block;
+  font-weight: 400;
+}
+
+.logo {
+  border-radius: 50%;
+  width: 180rpx;
+  height: 180rpx;
+  margin-bottom: 30rpx;
+}
+
+.button {
+  height: 80rpx;
+  line-height: 80rpx;
+  background: linear-gradient(270deg, rgba(173, 216, 230, 1) 0%, rgba(135, 206, 235, 1) 100%);
+  border-radius: 6rpx;
+  margin: 0 66rpx;
+}
+
+.button-text {
+  font-size: 40rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
+  line-height: 56rpx;
+}

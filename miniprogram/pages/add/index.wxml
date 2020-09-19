@@ -1,0 +1,63 @@
+<view class="book-add">
+  <form bindsubmit="formSubmit">
+    <!-- 所属账本 -->
+    <view class='input-item'>
+      <picker name="bookIndex" value="{{bookIndex}}" bindchange="bindBookChange" range-key="name" range="{{books}}">
+        <view class="picker flex">
+          <label class=' input-label'>所属账本:</label>
+          <text class='flex1 input-text'>{{books[bookIndex].name}}</text>
+          <image class='input-icon' src='../../images/rightarrow.png'></image>
+        </view>
+      </picker>
+    </view>
+    <!-- 小账类别 -->
+    <view class='input-item'>
+      <picker name="typeValue" bindchange="bindTypeChange" range-key="name" value="{{typeValue}}" range="{{types}}">
+        <view class="picker flex">
+          <label class=' input-label'>小账类别:</label>
+          <text class='flex1 input-text'>{{types[typeValue].name}}</text>
+          <image class='input-icon' src='../../images/rightarrow.png'></image>
+        </view>
+      </picker>
+    </view>
+    <!-- 收入种类 -->
+    <view class='input-item' >
+      <picker name="incomeIndex" bindchange="bindIncomeChange" range-key="name" value="{{incomeIndex}}" range="{{incomeTypes}}">
+        <view class="picker flex">
+          <label class=' input-label'>收支小类:</label>
+          <text class='flex1 input-text'>{{incomeTypes[incomeIndex].name}}</text>
+          <image class='input-icon' src='../../images/rightarrow.png'></image>
+        </view>
+      </picker>
+    </view>
+
+    <!-- 小账金额 -->
+    <view class='input-item flex'>
+      <label class=' input-label'>小账金额:</label>
+      <input value='{{count}}' placeholder='请输入小账金额' class='flex1 input-text' type="digit" name="count"></input>
+    </view>
+
+    <!-- 发生日期 -->
+    <view class='input-item '>
+      <picker name="date" mode="date" bindchange="bindDateChange" value="{{date}}">
+        <view class="picker flex">
+          <label class=' input-label'>发生时间:</label>
+          <text class='flex1 input-text'>{{date}}</text>
+          <image class='input-icon' src='../../images/rightarrow.png'></image>
+        </view>
+      </picker>
+    </view>
+
+    <!-- 小账说明 -->
+    <view class='input-item flex flex-textarea'>
+      <label class="textarea-label input-label">小账说明:</label>
+      <textarea name="desc" placeholder-class='textarea-placeholder' class='flex1 input-text input-textarea' value='{{desc}}' placeholder="对小账的说明，如：住宿" />
+    </view>
+
+    <!-- 保存按钮 -->
+    <button disabled='{{!submitEnable}}' class='button button-save' form-type="submit">
+      <text class='button-text'>保存小账</text>
+    </button>
+
+  </form>
+</view>

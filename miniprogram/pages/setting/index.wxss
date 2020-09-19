@@ -1,0 +1,64 @@
+@import '../../style/guide.wxss';
+
+.book-setting {
+  background: #87ceeb;
+  padding-bottom: 40rpx;
+  padding-top: 10rpx;
+}
+
+.avatar {
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.avatarBox {
+  display: inline-block;
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 50%;
+  text-align: center;
+  overflow: hidden;
+}
+
+.userName {
+  display: block;
+}
+
+.setting-menu {
+  text-align: left;
+  border-top: 2rpx solid #ebebeb;
+}
+
+.setting-menu__item {
+  justify-content: space-between;
+}
+
+.contactBox {
+  position: fixed;
+  bottom: 160rpx;
+  right: 60rpx;
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.btn-contact {
+  border: 0;
+  outline: none;
+  line-height: 1;
+  background: transparent;
+  width: 100rpx;
+  height: 100rpx;
+  position: absolute;
+  z-index: 8;
+}
+
+.btn-contact::after {
+  border: 0;
+}
+
+.contact-icon {
+  width: 100rpx;
+  height: 100rpx;
+}

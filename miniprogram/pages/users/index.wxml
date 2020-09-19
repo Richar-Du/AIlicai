@@ -1,0 +1,21 @@
+<!--mybook/pages/users/index.wxml-->
+<wxs src="../../utils/date.wxs" module="date" />
+<view>
+  <view>
+    <text>总用户量：</text>{{userCount}}</view>
+</view>
+<view class='user-list'>
+  <view wx:for='{{users}}' wx:key='{{index}}' class='user-item'>
+    <view class='flex-center'>
+      <view class='flex-center'>
+        <image wx:if='{{item.avatarUrl}}' src='{{item.avatarUrl}}' class='avatar'></image>
+        <image wx:if="{{!item.avatarUrl && item.gender==1}}" src='../../images/user-man.jpeg' class='avatar'></image>
+        <image wx:if='{{!item.avatarUrl && item.gender==2}}' src='../../images/user-woman.jpeg' class='avatar'></image>
+        <image wx:if='{{!item.avatarUrl && !item.gender}}' src='../../images/logo.jpeg' class='avatar'></image>
+        <text class='color6'>{{item.nickName || 'No one'}}</text>
+      </view>
+      <text class='color6'>{{item.gender==1?'男':'女'}}</text>
+    </view>
+    <view class='lasttime'>上次登录时间：{{date.formate2Date(item.loginTime)}}</view>
+  </view>
+</view>

@@ -1,0 +1,170 @@
+@import '../../style/guide.wxss';
+
+.book-main {
+  background: rgba(135, 206, 235,0.6);
+  padding-bottom: 40rpx;
+  padding-top: 10rpx;
+}
+
+.avatar {
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.avatarBox {
+  display: inline-block;
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 50%;
+  text-align: center;
+  overflow: hidden;
+}
+
+.balance-wrapper {
+  color: #fff;
+  font-size: 40rpx;
+  font-weight: 400;
+}
+
+.balance-text {
+  margin-top: 10rpx;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+}
+
+.month-wrapper {
+  margin-top: 30rpx;
+}
+
+.menu-wrapper {
+  margin-top: 20rpx;
+  padding-bottom: 20rpx;
+  border-bottom: 2rpx solid #ebebeb;
+}
+
+.menu-img {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.menu-name {
+  font-size: 30rpx;
+}
+
+.no-data {
+  text-align: center;
+  margin-top: 100rpx;
+}
+
+/* 最近记录模块样式 */
+
+.record-left {
+  color: #333;
+  line-height: 100%;
+  flex: 3;
+}
+
+.v-center {
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+.record-desc {
+  padding-left: 20rpx;
+  color: #666;
+  font-size: 32rpx;
+}
+
+.record-right {
+  text-align: right;
+  flex: 1;
+}
+
+.record-type {
+  font-size: 22rpx;
+  color: #fff;
+  padding: 0 8rpx;
+  border-radius: 8rpx;
+  margin-right: 10rpx;
+  font-weight: 700;
+}
+
+.record-date {
+  font-size: 28rpx;
+  background-color: #efefef;
+  padding: 8rpx 30rpx;
+  color: #666;
+  justify-content: space-between;
+  width: auto;
+}
+
+.date-expenditure {
+  margin-left: 10rpx;
+}
+
+.record-count {
+  /* color: #87CEEB; */
+}
+
+.price-down {
+  color: red;
+}
+
+.item-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15rpx;
+  box-sizing: border-box;
+}
+
+.tright {
+  position: absolute;
+  width: 100%;
+  z-index: 9;
+  left: 0;
+  transition: left 0.2s ease-in-out;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  text-align: left;
+}
+
+.item {
+  position: relative;
+  box-sizing: border-box;
+  text-align: right;
+}
+
+.item-del {
+  background-color: red;
+  width: 180rpx;
+  color: #fff;
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 30rpx 0;
+  box-sizing: border-box;
+  border-bottom: 2rpx solid #ebebeb;
+}
+
+.tab-box {
+  background: #fff;
+  font-size: 32rpx;
+}
+
+.tab-box .tab {
+  padding: 20rpx 0;
+}
+
+.tab-box .tab.active {
+  background: rgba(240, 248, 255, 0.5);
+  color: rgba(240, 248, 255, 1);
+}

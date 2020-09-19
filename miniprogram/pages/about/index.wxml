@@ -1,0 +1,23 @@
+<view class="book-about">
+  <image class='logo' src='../../images/logo.jpeg'></image>
+  <text class='name'>我的小账</text>
+</view>
+
+<!-- 更新说明 -->
+<view class="content-wrapper">
+  <text class='block item item-title'>本次更新说明</text>
+  <view class='block item '>
+    <text>版本：v1.0.5</text>
+    <text class='flex-item'>日期：2019-05-06</text>
+  </view>
+  <text class='block item'>说明：</text>
+  <text class='block item'>1. 添加可以分页的云函数及调用</text>
+  <text class='block item'>2. 修复统计分析数据不全的问题</text>
+  <text class='block item'>3. 修复其他已知问题</text>
+  <text class='block item'>4. 优化用户体验</text>
+</view>
+
+<view class='about-history flex' bindtap="handleItem" data-name="history">
+  <text>历史版本</text>
+  <image class='input-icon' src='../../images/rightarrow.png'></image>
+</view>

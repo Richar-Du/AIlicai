@@ -1,0 +1,52 @@
+@import '../../style/guide.wxss';
+
+page {
+  background: #ebebeb;
+}
+
+.book-about {
+  padding-bottom: 40rpx;
+  padding-top: 40rpx;
+  text-align: center;
+}
+
+.name {
+  display: block;
+  font-weight: 400;
+}
+
+.logo {
+  border-radius: 50%;
+  width: 180rpx;
+  height: 180rpx;
+  margin-bottom: 30rpx;
+}
+
+.content-wrapper {
+  font-size: 32rpx;
+  background-color: #fff;
+}
+
+.item {
+  padding: 8rpx 0 8rpx 10rpx;
+}
+
+.flex-item {
+  display: inline-block;
+  margin-left: 20rpx;
+}
+
+.item-title {
+  border-bottom: 2rpx solid #ebebeb;
+  margin-left: 10rpx;
+  padding-left: 0;
+}
+
+.about-history {
+  background-color: #fff;
+  font-size: 32rpx;
+  margin-top: 30rpx;
+  padding: 20rpx;
+  justify-content: space-between;
+  width: auto;
+}

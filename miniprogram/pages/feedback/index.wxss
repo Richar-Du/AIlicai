@@ -1,0 +1,30 @@
+@import '../../style/guide.wxss';
+
+.book-feedback {
+  text-align: left;
+}
+
+.feedback-content {
+  border: 2rpx solid #ebebeb;
+  width: 100%;
+  /* margin-top: 60rpx; */
+}
+
+.button {
+  height: 80rpx;
+  line-height: 80rpx;
+  background: linear-gradient(270deg, rgba(173, 216, 230, 1) 0%, rgba(135, 206, 235, 1) 100%);
+  border-radius: 6rpx;
+  margin: 0 66rpx;
+}
+
+.button-save {
+  margin: 60rpx 132rpx;
+}
+
+.button-text {
+  font-size: 40rpx;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
+  line-height: 56rpx;
+}

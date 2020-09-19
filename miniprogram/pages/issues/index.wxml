@@ -1,0 +1,20 @@
+<wxs src="../../utils/date.wxs" module="date" />
+<view class="issue-list">
+  <view wx:for="{{issues}}" wx:key='{{index}}' class='issue-item'>
+    <!-- 头像部分 -->
+    <view class='flex-center '>
+      <view class='flex-center '>
+        <image class='avatar' src='{{item.avatarUrl}}'></image>
+        <text class='color6'>{{item.nickName}}</text>
+      </view>
+      <text class='color6'>{{item.gender==1?'男':'女'}}</text>
+    </view>
+    <!-- 省份城市信息 -->
+    <view class='flex-center areabox'>
+      <text class='color6'>{{item.province+item.city||'未知区域'}}</text>
+      <text class='color3'>{{date.formate2Date(item.createdTime)}}</text>
+    </view>
+    <!-- 反馈内容 -->
+    <text>{{item.content}}</text>
+  </view>
+</view>

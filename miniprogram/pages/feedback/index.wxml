@@ -1,0 +1,9 @@
+<view class="book-feedback page-center">
+  <form bindsubmit="handleSave">
+    <textarea value="{{content}}" bindblur="bindTextAreaBlur" name="content" class="feedback-content" placeholder='欢迎您提供宝贵意见，那将是我前进的动力'></textarea>
+
+    <button form-type="submit" class='button button-save'>
+      <text class='button-text'>保存</text>
+    </button>
+  </form>
+</view>
