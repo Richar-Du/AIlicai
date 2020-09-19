@@ -1,15 +1,5 @@
 <view class="book-add">
   <form bindsubmit="formSubmit">
-    <!-- 所属账本 -->
-    <view class='input-item'>
-      <picker name="bookIndex" value="{{bookIndex}}" bindchange="bindBookChange" range-key="name" range="{{books}}">
-        <view class="picker flex">
-          <label class=' input-label'>所属账本:</label>
-          <text class='flex1 input-text'>{{books[bookIndex].name}}</text>
-          <image class='input-icon' src='../../images/rightarrow.png'></image>
-        </view>
-      </picker>
-    </view>
     <!-- 小账类别 -->
     <view class='input-item'>
       <picker name="typeValue" bindchange="bindTypeChange" range-key="name" value="{{typeValue}}" range="{{types}}">
@@ -56,7 +46,7 @@
 
     <!-- 保存按钮 -->
     <button disabled='{{!submitEnable}}' class='button button-save' form-type="submit">
-      <text class='button-text'>保存小账</text>
+      <text class='button-text'>保存</text>
     </button>
 
   </form>

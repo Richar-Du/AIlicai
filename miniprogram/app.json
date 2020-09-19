@@ -17,7 +17,7 @@
     "backgroundColor": "#F0F8FF",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#F6F6F6",
-    "navigationBarTitleText": "我的小账",
+    "navigationBarTitleText": "松鼠理财",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {

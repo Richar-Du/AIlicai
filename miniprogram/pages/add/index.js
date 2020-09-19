@@ -2,7 +2,6 @@ const app = getApp()
 
 Page({
   data: {
-    books: ['家电'],
     types: [{
       name: '收入',
       value: 1
@@ -14,7 +13,6 @@ Page({
     tmpIncomeTypes: [],
     expenditureTypes: [], // 支出类型
     typeValue: 0,
-    bookIndex: 0,
     incomeIndex: 0,
     date: null,
     submitEnable:true
@@ -24,7 +22,6 @@ Page({
     this.setData({
       date: this.getDefaultDate()
     })
-
     let _this = this
   },
 
@@ -33,13 +30,6 @@ Page({
     this.setData({
       desc: '',
       count: ''
-    })
-  },
-
-  // 账本选择发生变化
-  bindBookChange(event) {
-    this.setData({
-      bookIndex: event.detail.value
     })
   },
 
