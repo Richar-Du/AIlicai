@@ -1,1 +1,24 @@
 /* miniprogram/pages/questionnaire/questionnaire.wxss */
+page {
+  height:100%;
+  width:100%
+}
+
+.block {
+  height:10%;
+  background-color:#87CEEB
+}
+
+.block2 {
+  height:10%;
+  background-color:#87CEEB;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* .qa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} */
