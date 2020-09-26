@@ -1,7 +1,13 @@
 @import '../../style/guide.wxss';
-  
-.book-add {
-
+.picker_container{
+  display: flex;
+  flex-direction: row;
+  font-size: 40rpx;
+}
+.input_container{
+  display: flex;
+  flex-direction: row;
+  font-size: 40rpx;
 }
 
 .button {
