@@ -118,9 +118,9 @@ Page({
     })
     db.collection(consume_type).add({
       data:{
-        "金额":consume_num,
-        "日期":consume_date,
-        "备注":consume_remarks
+        "money":consume_num,
+        "date":consume_date,
+        "notes":consume_remarks
       }
     })
     wx.hideLoading()
