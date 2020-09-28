@@ -9,7 +9,7 @@
 
     <picker range="{{actualTypes}}" bindchange="chooseType" value="{{typeValue}}">
       <view class="picker_container">
-        <label>消费类型：</label>
+        <label>账面类型：</label>
         <text>{{actualTypes[typeValue]}}</text>
       </view>
     </picker>
@@ -37,6 +37,10 @@
     <button disabled='{{!submitEnable}}' class='button button-save' form-type="submit">
       <text class='button-text'>保存</text>
     </button>
+
+    <!--语音输入按钮-->
+    <button bindtouchstart='finger_touch_begin' bindtouchend="finger_touch_stop">语音记账</button>
+
 
   </form>
 </view>
