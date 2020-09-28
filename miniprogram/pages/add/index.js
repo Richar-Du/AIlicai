@@ -1,5 +1,37 @@
-const app = getApp()
+const app = getApp();
 const db = wx.cloud.database();
+const recorderManager = wx.getRecorderManager();
+
+function sendRecord(src) {
+  var obj = {
+  url: "http://vop.baidu.com/server_api",
+  filePath: src,
+  name: "sound_record",
+  header: {
+   'Content-Type': 'application/json'
+  },
+
+  success: function (result) {
+   var data = JSON.parse(result.data);
+   // msg 为最终语音识别的字符串
+   var msg = data.result;
+   console.log(msg);
+   // 获取当前页面对象
+   var page = getCurrentPages()[0];
+   page.setData({ msg: msg });
+  },
+
+  fail: function (err) {
+   console.log(err);
+  }
+  };
+  wx.uploadFile(obj)
+ }
+
+recorderManager.onStop((res)=>{
+  // 获取录音文件路径，并提交到百度
+  sendRecord(res.tempFilePath);
+})
 
 Page({
   data: {
@@ -10,8 +42,8 @@ Page({
       name: '收入',
       value: 1
     }],
-    incomeTypes: ["工资","兼职","投资"], // 收入类型
-    expenditureTypes: ["食品酒水","衣服饰品","行车交通","居家物业"], // 支出类型
+    incomeTypes: ["gongzi","qita"], // 收入类型
+    expenditureTypes: ["shipin","yifu","jiaotong","jujia"], // 支出类型
     actualTypes: [],
     inOutValue: 0,
     typeValue: 0,
@@ -19,6 +51,15 @@ Page({
     date: null,
     remarks: null,
     submitEnable:true
+  },
+  // 按下按钮开始录音
+  finger_touch_begin() {
+    recorderManager.start({
+    });
+  },
+  // 松开按钮结束录音
+  finger_touch_stop() {
+    recorderManager.stop();
   },
 
   onLoad: function() {
@@ -33,6 +74,7 @@ Page({
     this.setData({
       inOutValue: event.detail.value
     })
+    console.log(this.data.inOutValue)
 
     // 根据收支类型变化动态给收支小类赋值
     if (this.data.types[event.detail.value].value == 0) {
@@ -44,7 +86,6 @@ Page({
         actualTypes: this.data.incomeTypes
       })
     }
-
   },
   //选择消费类型
   chooseType(e){
@@ -66,19 +107,20 @@ Page({
     let inout = this.data.inOutValue
     let consume_type = this.data.actualTypes[this.data.typeValue]
     let consume_num = e.detail.value.count
+    if (inout == 0){
+      consume_num *= -1
+    }
     let consume_date = e.detail.value.date
     let consume_remarks = e.detail.value.remarks
 
     wx.showLoading({
       title: '正在保存',
     })
-    db.collection('zhangbu').add({
+    db.collection(consume_type).add({
       data:{
-        "收支类型":inout,
-        "消费类型":consume_type,
-        "消费金额":consume_num,
-        "消费日期":consume_date,
-        "消费备注":consume_remarks
+        "money":consume_num,
+        "date":consume_date,
+        "notes":consume_remarks
       }
     })
     wx.hideLoading()
@@ -88,7 +130,7 @@ Page({
       duration: 1000
     })
     this.setData({
-      submitEnable: false
+      submitEnable: true
     })
   },
 
