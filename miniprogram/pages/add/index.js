@@ -45,6 +45,9 @@ Page({
   sendRecord:function(src) {
     var that = this
     console.log(that.data)
+    wx.showLoading({
+      title: '识别中',
+    })
     wx.getFileSystemManager().readFile({
       filePath: src,
       success: (res) => {
@@ -72,13 +75,16 @@ Page({
             'dev_pid':80001
           },
           method: 'POST',
-          success: (res1) => {
-            console.log('res',res1)
+          success: (res) => {
+            console.log('res',res.data['result'][0].replace("。",""))
+            // that.setData({
+            //   sound_text:res.data
+            // })
             wx.hideLoading()
           },
-          fail: (res1) => {
+          fail: (res) => {
             console.log("识别失败")
-            console.log(res1)
+            console.log(res)
           }
         })
       }
