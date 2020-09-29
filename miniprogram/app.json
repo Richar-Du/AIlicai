@@ -11,7 +11,9 @@
     "pages/users/index",
     "pages/issues/index",
     "pages/market/market",
-    "pages/questionnaire/questionnaire"
+    "pages/questionnaire/questionnaire",
+    "pages/statistics_navigator/statistics_navigator",
+    "pages/statistics2/index"
   ],
   "window": {
     "backgroundColor": "#F0F8FF",

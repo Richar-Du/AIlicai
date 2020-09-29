@@ -1,35 +1,19 @@
 @import '../../style/guide.wxss';
 
-.book-statistics {
-}
-.hello{
-  background-color: pink;
-  height:100%;
+ec-canvas {
   width: 100%;
+  height: 100%;
 }
-.box {
-  width: 100%;
+.container {
   position: absolute;
-  top: 100rpx;
+  top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: pink;
-}
-
-.box-tabs {
-  height: 100rpx;
-  text-align: center;
-  padding: 0 80rpx;
-  width: auto;
-}
-
-.tab-left {
-  text-align: right;
-  padding-right: 20rpx;
-}
-
-.tab-right {
-  text-align: left;
-  padding-left: 20rpx;
-}
+	background-color: rgb(62, 175, 213);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+} 

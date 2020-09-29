@@ -1,5 +1,8 @@
 {
   "backgroundColor": "#F0F8FF",
   "navigationBarBackgroundColor": "#87CEEB",
-  "navigationBarTitleText": "小账分析"
+  "navigationBarTitleText": "小账分析",
+  "usingComponents": {
+		"ec-canvas": "../../ec-canvas/ec-canvas"
+	}
 }

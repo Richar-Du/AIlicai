@@ -66,6 +66,13 @@
 					"id": -1,
 					"name": "pages/statistics/index",
 					"pathName": "pages/statistics/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "statistics_navigator",
+					"pathName": "pages/statistics_navigator/statistics_navigator",
 					"scene": null
 				}
 			]

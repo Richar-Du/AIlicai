@@ -1,17 +1,82 @@
+import * as echarts from '../../ec-canvas/echarts';
+
+const db = wx.cloud.database()
+const jiaotong = db.collection('jiaotong')
+const jujia = db.collection('jujia')
+// const qita = db.collection('qita')
+const shipin = db.collection('shipin')
+const yifu = db.collection('yifu')
+const user = db.collection('user')
+
+function initChart(canvas, width, height, dpr) {
+  const chart = echarts.init(canvas, null, {
+    width: width,
+    height: height,
+    devicePixelRatio: dpr // 像素
+  });
+  canvas.setChart(chart);
+  let output=[0,0,0,0];
+  let categories=[jiaotong,jujia,shipin,yifu];
+    for (let category=0;category < categories.length; category++){  //遍历每一个账簿
+      categories[category].where({
+        _openid:"oyRnK5ZTqxOOlUArqGrqZS22RIqQ"    //根据openid找到这个用户
+      }).get().then(res=>{
+        console.log(res.data);    //  该账簿下该用户的数据
+        for (let i=0;i<res.data.length;i++){
+          output[category]-=res.data[i].money
+        }
+        console.log(categories[category].collectionName,"该账簿下共消费：",output[category]);
+        var option = {
+          title: {
+              text: '消费比例分布',
+              left: 'center'
+          },
+          tooltip: {},
+          legend: {
+            orient: 'vertical',
+            left: 'left',
+            data: ["出行","居家","食品","衣服"]
+        },
+          // xAxis: {
+          //     data: ["出行","居家","食品","衣服"]
+          // },
+          // yAxis: {},
+          series: [{
+              name: '开销',
+              type: 'pie',
+              data: [
+                {value:output[0],name:"出行"},
+                {value:output[1],name:"居家"},
+                {value:output[2],name:"食品"},
+                {value:output[3],name:"衣服"},          
+              ]
+          }]
+        };
+        chart.setOption(option);
+        return chart;
+      })
+    }
+
+  
+}
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    ec: {
+      onInit: initChart
+    },
+    
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    
   },
 
   /**
@@ -25,7 +90,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    
   },
 
   /**

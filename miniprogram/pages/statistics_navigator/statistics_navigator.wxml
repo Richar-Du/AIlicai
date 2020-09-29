@@ -1,0 +1,10 @@
+<!--miniprogram/pages/index/index.wxml-->
+<view class="index">
+  <view class="title">
+    <text>请选择</text>
+  </view>
+  <view class="button_container">
+    <button class="distribution" bindtap="goToCus">消费分布</button>
+    <button class="curve" bindtap="goToStore">消费曲线</button>
+  </view>
+</view>
