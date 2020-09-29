@@ -1,18 +1,10 @@
 <!--miniprogram/pages/questionnaire/questionnaire.wxml-->
-<view class="block"></view>
-<form bindsubmit="onbindsubmit">
-<scroll-view>
-<view wx:for="{{items}}" wx:key="{{index}}" class="qa" style="background-color:#F0FFFF;margin-bottom:20rpx"> 
-<view style="margin-left:50rpx">
-<view style="margin-bottom:10rpx;font-weight:bold">{{item.q}}</view>
-<radio-group bindchange="radioChange">
-  <label wx:for="{{item.a}}" wx:key="{{index}}">
-    <view><radio value="{{item.value}}"/>{{item.name}}</view>
-  </label>
-</radio-group>
+<view class="content">
+	<image class='background' src="../../images/b.jpg" mode="aspectFill"></image>
 </view>
+<view class="q">
+{{items[index].q}}
 </view>
-</scroll-view>
-<button form-type="submit" style="font-weight:bold;background-color:#87CEEB">提交</button>
-</form>
-<!-- <view class="block2"></view> -->
+<view wx:for="{{items[index].a}}" wx:key="{{index}}">
+<button data-number='{{item.number}}' data-total='{{item.name}}' bindtap="onbutton" class="choice">{{item.name}}</button>
+</view>
