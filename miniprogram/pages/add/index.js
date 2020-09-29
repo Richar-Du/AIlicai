@@ -1,37 +1,9 @@
 const app = getApp();
 const db = wx.cloud.database();
 const recorderManager = wx.getRecorderManager();
-
-function sendRecord(src) {
-  var obj = {
-  url: "http://vop.baidu.com/server_api",
-  filePath: src,
-  name: "sound_record",
-  header: {
-   'Content-Type': 'application/json'
-  },
-
-  success: function (result) {
-   var data = JSON.parse(result.data);
-   // msg 为最终语音识别的字符串
-   var msg = data.result;
-   console.log(msg);
-   // 获取当前页面对象
-   var page = getCurrentPages()[0];
-   page.setData({ msg: msg });
-  },
-
-  fail: function (err) {
-   console.log(err);
-  }
-  };
-  wx.uploadFile(obj)
- }
-
-recorderManager.onStop((res)=>{
-  // 获取录音文件路径，并提交到百度
-  sendRecord(res.tempFilePath);
-})
+const APIKey="cFmNd8srEgF9OKe8gRw5yiy9"
+const SecretKey="7YSZyhUilN4bGH480VG3mUcjnPfHl9GA"
+const urlForRecord = "https://vop.baidu.com/pro_api"
 
 Page({
   data: {
@@ -50,12 +22,67 @@ Page({
     count:0,
     date: null,
     remarks: null,
-    submitEnable:true
+    submitEnable:true,
+    recordBase64:null,
+    recordSize:0
   },
   // 按下按钮开始录音
-  finger_touch_begin() {
-    recorderManager.start({
-    });
+  finger_touch_begin:function() {    
+    var that = this
+    //录音参数
+    const options = {
+      sampleRate: 16000,
+      numberOfChannels: 1,
+      encodeBitRate: 48000,
+      format: 'PCM'
+    }
+    recorderManager.onStop((res)=>{
+      // 获取录音文件路径，并提交到百度
+      that.sendRecord(res.tempFilePath);
+    })
+    recorderManager.start(options);
+  },
+  sendRecord:function(src) {
+    var that = this
+    console.log(that.data)
+    wx.getFileSystemManager().readFile({
+      filePath: src,
+      success: (res) => {
+        console.log(res)
+        const base64 = wx.arrayBufferToBase64(res.data);
+        var fileSize = res.data.byteLength;
+        that.setData({
+          recordBase64:base64,
+          recordSize:fileSize
+        })
+        console.log("录音文件读取成功")
+        wx.request({
+          url: urlForRecord,
+          header: {
+            'Content-Type':'application/json',
+          },
+          data: {
+            'format':'pcm',
+            'rate':16000,
+            'channel':1,
+            'token':'24.8665270d237fc3302e998e0d083585e7.2592000.1603958262.282335-22765338',
+            'speech': base64,
+            'len':fileSize,
+            'cuid':'baidu_workshop',
+            'dev_pid':80001
+          },
+          method: 'POST',
+          success: (res1) => {
+            console.log('res',res1)
+            wx.hideLoading()
+          },
+          fail: (res1) => {
+            console.log("识别失败")
+            console.log(res1)
+          }
+        })
+      }
+    })
   },
   // 松开按钮结束录音
   finger_touch_stop() {
