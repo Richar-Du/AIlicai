@@ -14,9 +14,12 @@ Page({
       name: '收入',
       value: 1
     }],
-    incomeTypes: ["gongzi","qita"], // 收入类型
-    expenditureTypes: ["cysg","yfsp","jtcx","jjwy"], // 支出类型
-    actualTypes: [],
+    incomeTypesForDisplay: ["薪水奖金","兼职收入","投资理财","其他收入"], // 收入类型
+    incomeTypes: ["xsjj","jjsr","tzlc","qtsr"],
+    expenditureTypesForDisplay: ["衣服饰品","餐饮蔬果","零食烟酒","住房汽车","家居物业","交通出行","旅行游玩","医疗医药","美容美发","意外支出","通讯话费","人情往来","购物娱乐","花鸟鱼虫","电子数码","运动健身","学习办公","爱心慈善","其他支出"],
+    expenditureTypes:["yfsp","cysg","lsyj","zfqc","jjwy","jtcx","lxyw","ylyy","mrmf","ywzc","txhf","rqwl","gwyl","hnyc","dzsm","ydjs","xxbg","axcs","qtzc"],
+    actualTypesForDisplay: ["衣服饰品","餐饮蔬果","零食烟酒","住房汽车","家居物业","交通出行","旅行游玩","医疗医药","美容美发","意外支出","通讯话费","人情往来","购物娱乐","花鸟鱼虫","电子数码","运动健身","学习办公","爱心慈善","其他支出"],
+    actualTypes:["yfsp","cysg","lsyj","zfqc","jjwy","jtcx","lxyw","ylyy","mrmf","ywzc","txhf","rqwl","gwyl","hnyc","dzsm","ydjs","xxbg","axcs","qtzc"],
     inOutValue: 0,
     typeValue: 0,
     count:0,
@@ -98,7 +101,7 @@ Page({
   onLoad: function() {
     this.setData({
       date: this.getDefaultDate(),
-      actualTypes: this.data.expenditureTypes
+      actualTypesForDisplay: this.data.expenditureTypesForDisplay
     })
   },
 
@@ -107,15 +110,16 @@ Page({
     this.setData({
       inOutValue: event.detail.value
     })
-    console.log(this.data.inOutValue)
 
     // 根据收支类型变化动态给收支小类赋值
     if (this.data.types[event.detail.value].value == 0) {
       this.setData({
+        actualTypesForDisplay: this.data.expenditureTypesForDisplay,
         actualTypes: this.data.expenditureTypes
       })
     } else {
       this.setData({
+        actualTypesForDisplay: this.data.incomeTypesForDisplay,
         actualTypes: this.data.incomeTypes
       })
     }
@@ -153,6 +157,13 @@ Page({
       data:{
         "money":consume_num,
         "date":consume_date,
+        "notes":consume_remarks
+      }
+    })
+    db.collection('zhangbu').add({
+      data:{
+        "money":consume_num,
+        "date":new Date(),
         "notes":consume_remarks
       }
     })

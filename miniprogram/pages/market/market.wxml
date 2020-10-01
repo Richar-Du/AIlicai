@@ -1,2 +1,18 @@
 <!--miniprogram/pages/market/market.wxml-->
-<text>miniprogram/pages/market/market.wxml</text>
+<scroll-view>
+<view class="block" wx:for="{{fund}}" wx:key="{{index}}">
+<view class='zz'>
+<text wx:if="{{item.gszzl > 0}}" class="zzl" style="color:red;font-weight">日增长率:
+{{item.gszzl}}%</text>
+<text wx:if="{{item.gszzl < 0}}" class="zzl" style="color:green">日增长率:
+  {{item.gszzl}}%</text>
+</view>
+<view class="first">
+<text class="fundcode">{{item.fundcode}}</text>
+<text class="name">{{item.name}}
+</text>
+<text style="padding-top:20rpx">
+单位净值:{{item.dwjz}}</text>
+</view>
+</view>
+</scroll-view>
