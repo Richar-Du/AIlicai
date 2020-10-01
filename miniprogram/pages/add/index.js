@@ -163,7 +163,7 @@ Page({
     db.collection('zhangbu').add({
       data:{
         "money":consume_num,
-        "date":consume_date,
+        "date":new Date(),
         "notes":consume_remarks
       }
     })
