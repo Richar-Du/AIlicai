@@ -7,10 +7,10 @@
       </view>
     </picker>
 
-    <picker range="{{actualTypes}}" bindchange="chooseType" value="{{typeValue}}">
+    <picker range="{{actualTypesForDisplay}}" bindchange="chooseType" value="{{typeValue}}">
       <view class="picker_container">
         <label>账面类型：</label>
-        <text>{{actualTypes[typeValue]}}</text>
+        <text>{{actualTypesForDisplay[typeValue]}}</text>
       </view>
     </picker>
 
