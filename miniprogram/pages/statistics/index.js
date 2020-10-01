@@ -1,11 +1,11 @@
 import * as echarts from '../../ec-canvas/echarts';
 
 const db = wx.cloud.database()
-const jiaotong = db.collection('jiaotong')
-const jujia = db.collection('jujia')
+const jtcx = db.collection('jtcx')
+const jjwy = db.collection('jjwy')
 // const qita = db.collection('qita')
-const shipin = db.collection('shipin')
-const yifu = db.collection('yifu')
+const cysg = db.collection('cysg')
+const yfsp = db.collection('yfsp')
 const user = db.collection('user')
 
 function initChart(canvas, width, height, dpr) {
@@ -16,7 +16,7 @@ function initChart(canvas, width, height, dpr) {
   });
   canvas.setChart(chart);
   let output=[0,0,0,0];
-  let categories=[jiaotong,jujia,shipin,yifu];
+  let categories=[jtcx,jjwy,cysg,yfsp];
     for (let category=0;category < categories.length; category++){  //遍历每一个账簿
       categories[category].where({
         _openid:"oyRnK5ZTqxOOlUArqGrqZS22RIqQ"    //根据openid找到这个用户
@@ -67,7 +67,7 @@ Page({
    */
   data: {
     ec: {
-      onInit: initChart
+      onInit: initChart     //一定要有这个！！！
     },
     
   },

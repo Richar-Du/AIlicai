@@ -98,7 +98,7 @@
 
 .record-date {
   font-size: 28rpx;
-  background-color: #efefef;
+  background-color: #f05454;
   padding: 8rpx 30rpx;
   color: #666;
   justify-content: space-between;
@@ -167,4 +167,19 @@
 .tab-box .tab.active {
   background: rgba(240, 248, 255, 0.5);
   color: rgba(240, 248, 255, 1);
+}
+.records-exit{
+  height: 100%;
+  width: 100%;
+}
+.head{
+  background-color: pink;
+  display: flex;
+  flex-direction: row; 
+  text-align: center;
+}
+.body{
+  display: flex;
+  flex-direction: row;
+  text-align: center;
 }

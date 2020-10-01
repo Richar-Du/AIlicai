@@ -15,7 +15,7 @@ Page({
       value: 1
     }],
     incomeTypes: ["gongzi","qita"], // 收入类型
-    expenditureTypes: ["shipin","yifu","jiaotong","jujia"], // 支出类型
+    expenditureTypes: ["cysg","yfsp","jtcx","jjwy"], // 支出类型
     actualTypes: [],
     inOutValue: 0,
     typeValue: 0,

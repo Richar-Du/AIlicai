@@ -73,6 +73,20 @@
 					"id": -1,
 					"name": "statistics_navigator",
 					"pathName": "pages/statistics_navigator/statistics_navigator",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "curve-navigator",
+					"pathName": "pages/curve-navigator/curve-navigator",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "curve",
+					"pathName": "pages/curve/curve",
 					"scene": null
 				}
 			]

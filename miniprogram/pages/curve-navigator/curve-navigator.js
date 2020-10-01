@@ -1,4 +1,3 @@
-// miniprogram/pages/index/index.js
 Page({
 
   /**
@@ -12,12 +11,12 @@ Page({
    */
   onLoad: function (options) {
   },
-  distribution:function(e){
+  goToCus:function(e){
     wx.reLaunch({
       url: '../statistics/index',
     })
   },
-  curve:function(e){
+  goToStore:function(e){
     wx.redirectTo({
       url: '../statistics2/index',
     })

@@ -4,7 +4,7 @@
     <text>请选择</text>
   </view>
   <view class="button_container">
-    <button class="distribution" bindtap="goToCus">消费分布</button>
-    <button class="curve" bindtap="goToStore">消费曲线</button>
+    <button class="distribution" bindtap="distribution">消费分布</button>
+    <button class="curve" bindtap="curve">消费曲线</button>
   </view>
 </view>

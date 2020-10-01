@@ -1,2 +1,3 @@
-<!--pages/statistics2/index.wxml-->
-<text>pages/statistics2/index.wxml</text>
+<view class="container">
+  <ec-canvas id="mychart-dom-pi" canvas-id="mychart-pi" ec="{{ ec }}"></ec-canvas>
+</view>

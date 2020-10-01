@@ -1,12 +1,13 @@
 const app = getApp()
-
+const db = wx.cloud.database();
+const jtcx = db.collection("jtcx");
 Page({
   data: {
     userInfo: {},
     records: [],
     data: {
-      income: 0, // 收入
-      expenditure: 0, // 支出
+      income: 50, // 收入
+      expenditure: 30, // 支出
       diffCount: 0 // 
     },
     delBtnWidth: 180,
@@ -51,6 +52,7 @@ Page({
 
   onLoad: function() {
     // 第一次加载的时候
+    this.getdata();
     if (!wx.getStorageSync('refused')) {
       wx.setStorageSync('refused', false)
     }
@@ -61,6 +63,15 @@ Page({
     })
     this.getRecordList()
   },
+  /**
+	 * 页面相关事件处理函数--监听用户下拉动作
+	 */
+	onPullDownRefresh: function () {
+		this.getdata(res => {
+			wx.stopPullDownRefresh();
+		});
+		this.pagedata.skip = 0;
+	},
   touchS: function(e) {
     if (e.touches.length == 1) {
       this.setData({
@@ -143,5 +154,26 @@ Page({
         }
       }
     })
-  }
+  },
+  pagedata: {
+		skip: 0
+  },
+  getdata: function (callback) {
+		if (!callback) {
+			callback = res => { }
+		}
+		wx.showLoading({
+			title: '数据加载中',
+		})
+		jtcx.skip(this.pagedata.skip).get().then(res => {
+      console.log(res);
+      console.log(this.data.records)
+			this.setData({
+				records: this.data.records.concat(res.data)
+			}),
+				this.pagedata.skip = this.pagedata.skip + 20;
+			wx.hideLoading();
+			callback();
+		})
+	},
 })
