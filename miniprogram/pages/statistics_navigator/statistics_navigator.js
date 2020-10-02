@@ -12,16 +12,6 @@ Page({
    */
   onLoad: function (options) {
   },
-  distribution:function(e){
-    wx.reLaunch({
-      url: '../statistics/index',
-    })
-  },
-  curve:function(e){
-    wx.redirectTo({
-      url: '../statistics2/index',
-    })
-  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

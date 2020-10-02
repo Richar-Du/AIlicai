@@ -87,6 +87,27 @@
 					"id": -1,
 					"name": "curve",
 					"pathName": "pages/curve/curve",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "questionnaire",
+					"pathName": "pages/questionnaire/questionnaire",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "questionare-result",
+					"pathName": "pages/questionare-result/questionare-result",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "questionare-result",
+					"pathName": "pages/questionare-result/questionare-result",
 					"scene": null
 				}
 			]

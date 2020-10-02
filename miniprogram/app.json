@@ -15,7 +15,8 @@
 		"pages/statistics_navigator/statistics_navigator",
 		"pages/statistics2/index",
 		"pages/curve/curve",
-		"pages/curve-navigator/curve-navigator"
+		"pages/curve-navigator/curve-navigator",
+		"pages/questionare-result/questionare-result"
 	],
 	"window": {
 		"backgroundColor": "#F0F8FF",
@@ -34,7 +35,7 @@
 				"selectedIconPath": "images/bookd.png"
 			},
 			{
-				"pagePath": "pages/statistics/index",
+				"pagePath": "pages/statistics_navigator/statistics_navigator",
 				"text": "统计",
 				"iconPath": "images/statistics.png",
 				"selectedIconPath": "images/statisticsd.png"

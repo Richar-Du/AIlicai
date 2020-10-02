@@ -26,8 +26,10 @@
 
 .distribution{
   background: #f2656d;
+  width:50%
 }
 
 .curve{
   background: #48577f;
+  width:50%
 }

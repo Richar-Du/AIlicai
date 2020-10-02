@@ -30,3 +30,13 @@ page {
   font-weight: 500;
   background-color: #87CEEB; 
 }
+.strategy{
+  padding-top: 20vh;
+  text-align: center;
+  color: whitesmoke;
+  font-size: 60rpx;
+}
+.questionare-result{
+  margin-top: 110rpx;
+  width: 50%;
+}
