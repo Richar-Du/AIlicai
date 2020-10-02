@@ -10,7 +10,8 @@ Page({
 		user_openid:"oyRnK5ZTqxOOlUArqGrqZS22RIqQ",
 		active:0,
 		robust:0,
-		conservative:0
+		conservative:0,
+		stratergy:0
 	},
 
 	/**
@@ -25,6 +26,7 @@ Page({
       _openid:_this.data.user_openid
     }).get().then(res=>{
 			console.log(res.data[0].answer.q2)
+			//第一层叶子节点：把用户分成激进、稳健、保守
 			switch(res.data[0].answer.q2){
 				case '单身阶段':
 					active+=70
@@ -106,12 +108,33 @@ Page({
 					conservative+=20
 					break;					
 			}
+			var stratergy=0
+			//第二层叶子节点：根据承受时间配置不同的理财方案
+			switch(Math.max(active,robust,conservative)){
+				case active:
+					if (res.data[0].answer.q4=='3个月以内' || res.data[0].answer.q4=='6个月以内'){
+						stratergy=2
+					}
+					else
+						stratergy=1
+					break
+				case robust:
+					if (res.data[0].answer.q4=='3个月以内' || res.data[0].answer.q4=='6个月以内'){
+						stratergy=3
+					}
+					else
+						stratergy=4
+					break
+					case conservative:
+						stratergy=5
+			}
 			_this.setData({
 				active:active,
 				robust:robust,
-				conservative:conservative
+				conservative:conservative,
+				stratergy:stratergy
 			})
-			console.log(_this.data)
+			console.log(_this.data.stratergy)
 		})
 	},
 
@@ -162,5 +185,11 @@ Page({
 	 */
 	onShareAppMessage: function () {
 
+	},
+	toRecommendation:function(e){
+		var stratergy=this.data.stratergy
+		wx.reLaunch({
+			url:'/pages/market/market?id='+stratergy
+		})
 	}
 })

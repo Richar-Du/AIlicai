@@ -7,9 +7,12 @@
 	<view>
 		您已完成理财评测
 	</view>
-	<button class="questionare-result" bindtap="navToResult">
-		查看评测结果
-	</button>
+	<navigator url="/pages/questionare-result/questionare-result">
+		<button class="questionare-result">
+			查看评测结果
+		</button>
+	</navigator>
+	
 </view>
 
 <view wx:else>
