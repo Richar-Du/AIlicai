@@ -38,3 +38,10 @@ page {
 .zz {
   margin-right: 25rpx;
 }
+
+.type {
+  margin-left: 70rpx;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 2rpx;
+}

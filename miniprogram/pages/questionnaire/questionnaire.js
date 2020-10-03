@@ -62,7 +62,9 @@ Page({
           {number:'q6', name:"关注较多，及时调整"}, 
           {number:'q6', name:"关注较少，长期持有"}]
       }
-    ]
+    ],
+    user_openid:"oyRnK5ZTqxOOlUArqGrqZS22RIqQ",
+    finished:false,
   },
 
   /**
@@ -70,8 +72,19 @@ Page({
    */
   onLoad: function (options) {
     var openid =  wx.getStorageSync('mtj_uuid')
-    this.setData({
+    let _this = this
+    _this.setData({
       openid:openid
+    })
+    qcollection.where({
+      _openid:_this.data.user_openid
+    }).get().then(res=>{
+      console.log(res.data);
+      if (res.data.length>0){
+        _this.setData({
+            finished:true
+        })
+      }
     })
   },
 
@@ -92,5 +105,10 @@ Page({
         }
       })
     }
+  },
+  navToResult:function(e){
+    wx.redirectTo({
+      url: '/pages/questionare-result/questionare-result'
+    })
   }
 })

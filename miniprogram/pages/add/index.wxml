@@ -1,26 +1,26 @@
-<view class="book-add">
+<view class="book-add" style="margin-top:60rpx">
   <form bindsubmit="formSubmit">
-    <picker range="{{types}}" range-key="name" bindchange="chooseInOut" value="{{inOutValue}}">
+    <picker class="input" range="{{types}}" range-key="name" bindchange="chooseInOut" value="{{inOutValue}}">
       <view class="picker_container">
         <label>收支类型：</label>
         <text>{{types[inOutValue].name}}</text>
       </view>
     </picker>
 
-    <picker range="{{actualTypes}}" bindchange="chooseType" value="{{typeValue}}">
+    <picker class="input" range="{{actualTypesForDisplay}}" bindchange="chooseType" value="{{typeValue}}">
       <view class="picker_container">
-        <label>消费类型：</label>
-        <text>{{actualTypes[typeValue]}}</text>
+        <label>账面类型：</label>
+        <text>{{actualTypesForDisplay[typeValue]}}</text>
       </view>
     </picker>
 
-    <view class="input_container">
+    <view class="input_container,input">
       <label>消费金额:</label>
       <input value='{{count}}' placeholder='请输入消费金额' type="digit" name="count"></input>
     </view>
 
     <!-- 发生日期 -->
-    <picker name="date" mode="date" bindchange="bindDateChange" value="{{date}}">
+    <picker class="input" name="date" mode="date" bindchange="bindDateChange" value="{{date}}">
       <view class="picker_container">
         <label>消费日期:</label>
         <text>{{date}}</text>
@@ -28,7 +28,7 @@
     </picker>
     
     <!-- 小账说明 -->
-    <view class='picker_container'>
+    <view class='picker_container,input'>
       <label>备注:</label>
       <textarea name="remarks" class='flex1 input-text input-textarea' value='{{remarks}}' placeholder="对小账的说明，如：住宿" />
     </view>
@@ -37,6 +37,10 @@
     <button disabled='{{!submitEnable}}' class='button button-save' form-type="submit">
       <text class='button-text'>保存</text>
     </button>
+
+    <!--语音输入按钮-->
+    <button type="primary" bindtouchstart='finger_touch_begin' bindtouchend="finger_touch_stop">语音记账</button>
+
 
   </form>
 </view>

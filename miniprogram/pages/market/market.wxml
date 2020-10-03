@@ -13,6 +13,10 @@
 </text>
 <text style="padding-top:20rpx">
 单位净值:{{item.dwjz}}</text>
+<text class="type" wx:if="{{item.type=='股票型'}}" style="border-color: coral;color: coral">{{item.type}}</text>
+<text class="type" wx:if="{{item.type=='混合型'}}" style="border-color: blue;color: blue">{{item.type}}</text>
+<text class="type" wx:if="{{item.type=='债券型'}}" style="border-color: green;color: green">{{item.type}}</text>
+<text class="type" wx:if="{{item.type=='QDII型'}}" style="border-color: red;color: red">{{item.type}}</text>
 </view>
 </view>
 </scroll-view>

@@ -1,10 +1,25 @@
 <!--miniprogram/pages/questionnaire/questionnaire.wxml-->
+
 <view class="content">
 	<image class='background' src="../../images/b.jpg" mode="aspectFill"></image>
 </view>
-<view class="q">
-{{items[index].q}}
+<view wx:if="{{finished}}" class="strategy">
+	<view>
+		您已完成理财评测
+	</view>
+	<navigator url="/pages/questionare-result/questionare-result">
+		<button class="questionare-result">
+			查看评测结果
+		</button>
+	</navigator>
+	
 </view>
-<view wx:for="{{items[index].a}}" wx:key="{{index}}">
-<button data-number='{{item.number}}' data-total='{{item.name}}' bindtap="onbutton" class="choice">{{item.name}}</button>
+
+<view wx:else>
+	<view class="q">
+		{{items[index].q}}
+	</view>
+	<view wx:for="{{items[index].a}}" wx:key="{{index}}">
+		<button data-number='{{item.number}}' data-total='{{item.name}}' bindtap="onbutton" class="choice">{{item.name}}</button>
+	</view>
 </view>
