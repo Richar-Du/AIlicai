@@ -41,3 +41,8 @@
   padding-top: 20rpx;
   font-size: 38rpx;
 }
+
+.input {
+  margin-bottom: 30rpx;
+  margin-left:30rpx
+}
