@@ -41,6 +41,5 @@
     <!--语音输入按钮-->
     <button type="primary" bindtouchstart='finger_touch_begin' bindtouchend="finger_touch_stop">语音记账</button>
 
-
   </form>
 </view>

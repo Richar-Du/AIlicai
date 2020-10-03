@@ -13,7 +13,14 @@ App({
         traceUser: true,
       })
     }
-    this.globalData = {}
+    // 调用百度AI语音识别API的相关参数
+    this.globalData = {
+      baiduyuyin:{
+        apiKey: 'cFmNd8srEgF9OKe8gRw5yiy9',
+        secretKey: '7YSZyhUilN4bGH480VG3mUcjnPfHl9GA',
+        baidu_yuyin_access_token:'24.18e6bc377f03084027d36d7653383d9c.2592000.1603802053.282335-22765338'
+      }
+    }
   }
 })
 
