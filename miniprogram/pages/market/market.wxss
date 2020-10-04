@@ -1,1 +1,47 @@
 /* miniprogram/pages/market/market.wxss */
+page {
+  background-color: skyblue;
+}
+.name {
+  margin-left: 25rpx;
+  font-weight: bold;
+}
+
+.fundcode {
+  font-weight: bold;
+}
+
+.block {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 10rpx;
+  margin-bottom: 5rpx;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  border-color: ddd;
+  border-width: 2rpx;
+  border-style: solid;
+  background-color: #fff;
+}
+
+.zzl {
+  /* margin-left: 20rpx; */
+  font-weight: bold;
+  font-size: large;
+}
+
+.first {
+  margin-bottom: 20rpx;
+}
+
+.zz {
+  margin-right: 25rpx;
+}
+
+.type {
+  margin-left: 70rpx;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 2rpx;
+}

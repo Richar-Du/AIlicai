@@ -1,0 +1,26 @@
+<view class="content">
+	<image class='background' src="../../images/b.jpg" mode="aspectFill"></image>
+</view>
+<view class="stratergy">
+	<view wx:if="{{stratergy=== 1}}">
+	经过风险评测，给您推荐的理财方案是：
+	货币型基金（20%）+ 理财型基金（10%）+ 混合型基金（20%）+ 股票型基金（50%）
+	</view>
+	<view wx:if="{{stratergy=== 2}}">
+		经过风险评测，给您推荐的理财方案是：
+		货币型基金（10%）+ 理财型基金（25%）+ 混合型基金（35%）+ 股票型基金（30%）
+	</view>
+	<view wx:if="{{stratergy=== 3}}">
+		经过风险评测，给您推荐的理财方案是：
+		货币型基金（20%）+ 理财型基金（40%）+ 混合型基金（30%）+ 股票型基金（10%）
+	</view>
+	<view wx:if="{{stratergy=== 4}}">
+		经过风险评测，给您推荐的理财方案是：
+		货币型基金（40%）+ 理财型基金（20%）+ 混合型基金（10%）+ 股票型基金（30%） 
+	</view>
+	<view wx:if="{{stratergy=== 5}}">
+		经过风险评测，给您推荐的理财方案是：
+		货币型基金（50%）+ 理财型基金（50%）
+	</view>
+</view>
+<button class='recommendation' bindtap="toRecommendation">点击查看为您推荐的理财产品</button>

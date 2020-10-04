@@ -49,13 +49,66 @@
 		"game": {
 			"list": []
 		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
 		"miniprogram": {
 			"current": 0,
 			"list": [
 				{
 					"id": -1,
 					"name": "db guide",
-					"pathName": "pages/databaseGuide/databaseGuide"
+					"pathName": "pages/databaseGuide/databaseGuide",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "pages/statistics/index",
+					"pathName": "pages/statistics/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "statistics_navigator",
+					"pathName": "pages/statistics_navigator/statistics_navigator",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "curve-navigator",
+					"pathName": "pages/curve-navigator/curve-navigator",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "curve",
+					"pathName": "pages/curve/curve",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "questionnaire",
+					"pathName": "pages/questionnaire/questionnaire",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "questionare-result",
+					"pathName": "pages/questionare-result/questionare-result",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "questionare-result",
+					"pathName": "pages/questionare-result/questionare-result",
+					"scene": null
 				}
 			]
 		}
