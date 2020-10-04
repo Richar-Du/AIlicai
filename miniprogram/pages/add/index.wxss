@@ -35,11 +35,7 @@
 .button {
   height: 90rpx;
   line-height: 80rpx;
-<<<<<<< HEAD
-  background: linear-gradient(270deg, rgb(115, 210, 241) 0%, rgba(135, 206, 235, 1) 100%);
-=======
   background: linear-gradient(270deg, rgb(147, 210, 231) 0%, rgba(135, 206, 235, 1) 100%);
->>>>>>> ce2bd783292390a20077d27b1a62535ea8bb2354
   border-radius: 6rpx;
 }
 
