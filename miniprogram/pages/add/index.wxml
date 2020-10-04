@@ -39,7 +39,7 @@
     </button>
 
     <!--语音输入按钮-->
-    <button type="primary" bindtouchstart='finger_touch_begin' bindtouchend="finger_touch_stop">语音记账</button>
+    <button type="default" bindtouchstart='finger_touch_begin' bindtouchend="finger_touch_stop" class='button button-save'>语音记账</button>
 
   </form>
 </view>

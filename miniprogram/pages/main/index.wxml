@@ -9,18 +9,18 @@
 		</view>
 		<!-- 本月余额 -->
 		<view class='tcenter balance-wrapper'>
-			<text class='fontblod'>{{data.diffCount}}</text>
+			<text class='fontblod'>{{diffCount}}</text>
 			<text class='block balance-text'>余额</text>
 		</view>
 		<!-- 本月收入/支出 -->
 		<view class='flex month-wrapper'>
 			<view class='tcenter balance-wrapper width0 flex1'>
-				<text class='fontblod'>{{data.income}}</text>
+				<text class='fontblod'>{{income}}</text>
 				<text class='block '>收入</text>
 			</view>
 			<view class='vdivider flex0'></view>
 			<view class='tcenter balance-wrapper width0 flex1'>
-				<text class='fontblod'>{{data.expenditure}}</text>
+				<text class='fontblod'>{{expenditure}}</text>
 				<text class='block '>支出</text>
 			</view>
 		</view>
@@ -56,8 +56,8 @@
 		</view>		
 		<scroll-view scroll-y="{{true}}" class="records">
 			<block wx:for="{{records}}" wx:key="index" >
-				<view class="body">
-					<view>{{item.notes}}</view>
+				<view wx:if="{{item.money<0}}" class="body">
+					<view>{{item.type}}</view>
 					<view>{{-item.money}}</view>
 				</view>	
 			</block>
