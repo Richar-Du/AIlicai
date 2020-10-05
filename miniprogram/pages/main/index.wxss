@@ -117,10 +117,6 @@
   margin-left: 10rpx;
 }
 
-.record-count {
-  /* color: #87CEEB; */
-}
-
 .price-down {
   color: red;
 }
@@ -181,7 +177,7 @@
   width: 100%;
 }
 .head{
-  background-color: rgb(248, 168, 181);
+  background-color: rgb(241, 177, 188);
   display: flex;
   flex-direction: row; 
   text-align: center;
@@ -197,7 +193,7 @@
   flex-direction: row;
   text-align: center;
   padding-bottom: 10rpx;
-  border-style: solid;
-  border-color: rgba(124, 124, 124, 0.521);
+  border-style:solid;
+  border-color: rgba(243, 239, 239, 0.753);
   border-width: 1rpx
 }

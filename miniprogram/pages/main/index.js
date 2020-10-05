@@ -50,6 +50,7 @@ Page({
   },
 
   onLoad: function() {
+    console.log("openid是：",app.globalData.openid)
     // 第一次加载的时候
     this.getdata();
     if (!wx.getStorageSync('refused')) {
@@ -187,7 +188,7 @@ Page({
 			title: '数据加载中',
 		})
 		zhangbu.skip(this.pagedata.skip).where({
-
+      _openid:app.globalData.openid
     }).get().then(res => {
       console.log(res);
       console.log(this.data.records)

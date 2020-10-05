@@ -37,11 +37,8 @@ page {
   font-size: 60rpx;
 }
 .questionare-result{
-  margin-top: 200rpx;
-  padding-top: 15vh;
-  text-align: center;
-  color: white;
-  font-size: 60rpx;
+  margin-top: 200rpx; 
+   width:50%;
 }
 .questionare-result{
   margin-top: 110rpx;
