@@ -25,7 +25,7 @@
 			"outputPath": ""
 		},
 		"useIsolateContext": true,
-		"useCompilerModule": true,
+		"useCompilerModule": false,
 		"userConfirmedUseCompilerModuleSwitch": false
 	},
 	"appid": "wxdec5c029a674083d",
@@ -121,6 +121,13 @@
 				{
 					"id": -1,
 					"name": "statistics",
+					"pathName": "pages/statistics/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pie",
 					"pathName": "pages/statistics/index",
 					"scene": null
 				}

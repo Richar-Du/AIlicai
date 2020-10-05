@@ -1,3 +1,11 @@
 <view class="container">
   <ec-canvas id="mychart-dom-pi" canvas-id="mychart-pi" ec="{{ ec }}"></ec-canvas>
+  <view wx:if="{{abnormal===1}}" class="suggestion">
+    <view>
+      您的消费结构不够科学
+    </view>
+    <view>
+      快去看一下账单吧！
+    </view>  
+  </view>
 </view>

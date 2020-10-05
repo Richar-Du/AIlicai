@@ -48,7 +48,7 @@ page {
   border-radius: 15%;
   border-style: outset;
   border-width: 4rpx;
-  padding: 6rpx
+  padding: 6rpx;
   border-radius: 50%;
   border-style: solid;
   border-width: 2rpx;

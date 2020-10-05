@@ -3,6 +3,9 @@ const mtjwxsdk = require('./utils/mtj-wx-sdk.js');
 
 //app.js
 App({
+  globalData:{
+    openid:null
+  },
   onLaunch: function () {
     var that = this;
     if (!wx.cloud) {
@@ -32,7 +35,7 @@ App({
         name: "login",
         complete: res => {
           that.globalData.openid = res.result.openid;
-          console.log(that.globalData.openid)
+          console.log('appjs的openid是',that.globalData.openid)
         }
       })
     }
