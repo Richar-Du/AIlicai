@@ -1,4 +1,5 @@
 // miniprogram/pages/questionare-result/questionare-result.js
+const app=getApp()
 const db = wx.cloud.database()
 const qcollection = db.collection('questionnaire')
 Page({
@@ -7,7 +8,6 @@ Page({
 	 * 页面的初始数据
 	 */
 	data: {
-		user_openid:"oyRnK5ZTqxOOlUArqGrqZS22RIqQ",
 		active:0,
 		robust:0,
 		conservative:0,
@@ -23,7 +23,7 @@ Page({
 		var robust=_this.data.robust
 		var conservative=_this.data.conservative
 		qcollection.where({
-      _openid:_this.data.user_openid
+      _openid:app.globalData.openid
     }).get().then(res=>{
 			console.log(res.data[0].answer.q2)
 			//第一层叶子节点：把用户分成激进、稳健、保守

@@ -1,4 +1,5 @@
 // miniprogram/pages/questionnaire/questionnaire.js
+const app=getApp()
 const db = wx.cloud.database()
 const qcollection = db.collection('questionnaire')
 Page({
@@ -63,7 +64,6 @@ Page({
           {number:'q6', name:"关注较少，长期持有"}]
       }
     ],
-    user_openid:"oyRnK5ZTqxOOlUArqGrqZS22RIqQ",
     finished:false,
   },
 
@@ -77,7 +77,7 @@ Page({
       openid:openid
     })
     qcollection.where({
-      _openid:_this.data.user_openid
+      _openid:app.globalData.openid
     }).get().then(res=>{
       console.log(res.data);
       if (res.data.length>0){
