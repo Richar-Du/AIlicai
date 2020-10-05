@@ -1,3 +1,4 @@
+// pages/statistics2/index.js
 import * as echarts from '../../ec-canvas/echarts';
 
 const db = wx.cloud.database()
@@ -15,7 +16,7 @@ function initChart(canvas, width, height, dpr) {
     devicePixelRatio: dpr // 像素
   });
   canvas.setChart(chart);
-  let output=[0,0,0,0];
+  let output=[0,0,0,0,0,0,0,0,0,0,0,0];
   let categories=[jtcx,jjwy,cysg,yfsp];
     for (let category=0;category < categories.length; category++){  //遍历每一个账簿
       categories[category].where({
@@ -62,69 +63,66 @@ function initChart(canvas, width, height, dpr) {
 
 Page({
 
-  /**
-   * 页面的初始数据
-   */
-  data: {
-    ec: {
-      onInit: initChart     //一定要有这个！！！
-    },
-    
-  },
+	/**
+	 * 页面的初始数据
+	 */
+	data: {
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-    
-  },
+	},
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
+	/**
+	 * 生命周期函数--监听页面加载
+	 */
+	onLoad: function (options) {
 
-  },
+	},
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-    
-  },
+	/**
+	 * 生命周期函数--监听页面初次渲染完成
+	 */
+	onReady: function () {
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
+	},
 
-  },
+	/**
+	 * 生命周期函数--监听页面显示
+	 */
+	onShow: function () {
 
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
+	},
 
-  },
+	/**
+	 * 生命周期函数--监听页面隐藏
+	 */
+	onHide: function () {
 
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
+	},
 
-  },
+	/**
+	 * 生命周期函数--监听页面卸载
+	 */
+	onUnload: function () {
 
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
+	},
 
-  },
+	/**
+	 * 页面相关事件处理函数--监听用户下拉动作
+	 */
+	onPullDownRefresh: function () {
 
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
+	},
 
-  }
+	/**
+	 * 页面上拉触底事件的处理函数
+	 */
+	onReachBottom: function () {
+
+	},
+
+	/**
+	 * 用户点击右上角分享
+	 */
+	onShareAppMessage: function () {
+
+	}
 })

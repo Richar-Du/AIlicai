@@ -1,59 +1,64 @@
 {
-  "pages": [
-    "pages/main/index",
-    "pages/index/index",
-    "pages/setting/index",
-    "pages/add/index",
-    "pages/statistics/index",
-    "pages/feedback/index",
-    "pages/about/index",
-    "pages/history/index",
-    "pages/users/index",
-    "pages/issues/index",
-    "pages/market/market",
-    "pages/questionnaire/questionnaire"
-  ],
-  "window": {
-    "backgroundColor": "#F0F8FF",
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#F6F6F6",
-    "navigationBarTitleText": "松鼠理财",
-    "navigationBarTextStyle": "black"
-  },
-  "tabBar": {
-    "selectedColor": "#87CEEB",
-    "list": [
-      {
-        "pagePath": "pages/main/index",
-        "text": "账单",
-        "iconPath": "images/book.png",
-        "selectedIconPath": "images/bookd.png"
-      },
-      {
-        "pagePath": "pages/statistics/index",
-        "text": "统计",
-        "iconPath": "images/statistics.png",
-        "selectedIconPath": "images/statisticsd.png"
-      },
-      {
-        "pagePath": "pages/add/index",
-        "text": "记账",
-        "iconPath": "images/add.png",
-        "selectedIconPath": "images/addd.png"
-      },
-      {
-        "pagePath": "pages/market/market",
-        "text": "超市",
-        "iconPath": "images/market.png",
-        "selectedIconPath": "images/market.png"
-      },
-      {
-        "pagePath": "pages/questionnaire/questionnaire",
-        "text": "问卷",
-        "iconPath": "images/questionnaire.png",
-        "selectedIconPath": "images/questionnaire.png"
-      }
-    ]
-  },
-  "sitemapLocation": "sitemap.json"
+	"pages": [
+		"pages/main/index",
+		"pages/index/index",
+		"pages/setting/index",
+		"pages/add/index",
+		"pages/statistics/index",
+		"pages/feedback/index",
+		"pages/about/index",
+		"pages/history/index",
+		"pages/users/index",
+		"pages/issues/index",
+		"pages/market/market",
+		"pages/questionnaire/questionnaire",
+		"pages/statistics_navigator/statistics_navigator",
+		"pages/statistics2/index",
+		"pages/curve/curve",
+		"pages/curve-navigator/curve-navigator",
+		"pages/questionare-result/questionare-result"
+	],
+	"window": {
+		"backgroundColor": "#F0F8FF",
+		"backgroundTextStyle": "light",
+		"navigationBarBackgroundColor": "#F6F6F6",
+		"navigationBarTitleText": "松鼠理财",
+		"navigationBarTextStyle": "black"
+	},
+	"tabBar": {
+		"selectedColor": "#87CEEB",
+		"list": [
+			{
+				"pagePath": "pages/main/index",
+				"text": "账单",
+				"iconPath": "images/book.png",
+				"selectedIconPath": "images/bookd.png"
+			},
+			{
+				"pagePath": "pages/statistics_navigator/statistics_navigator",
+				"text": "统计",
+				"iconPath": "images/statistics.png",
+				"selectedIconPath": "images/statisticsd.png"
+			},
+			{
+				"pagePath": "pages/add/index",
+				"text": "记账",
+				"iconPath": "images/add.png",
+				"selectedIconPath": "images/addd.png"
+			},
+			{
+				"pagePath": "pages/market/market",
+				"text": "超市",
+				"iconPath": "images/market.png",
+				"selectedIconPath": "images/market1.png"
+			},
+			{
+				"pagePath": "pages/questionnaire/questionnaire",
+				"text": "问卷",
+				"iconPath": "images/questionnaire.png",
+				"selectedIconPath": "images/questionnaire1.png"
+			}
+		]
+	},
+	"sitemapLocation": "sitemap.json"
 }

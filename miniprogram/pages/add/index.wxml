@@ -1,3 +1,11 @@
+<view>
+	<image class='background' src="../../images/a.jpg" mode="aspectFill"></image>
+</view>
+
+ <view class="picker">
+        <text>手动记账</text>
+</view>
+
 <view class="book-add">
   <form bindsubmit="formSubmit">
     <picker range="{{types}}" range-key="name" bindchange="chooseInOut" value="{{inOutValue}}">
@@ -15,22 +23,22 @@
     </picker>
 
     <view class="input_container">
-      <label>消费金额:</label>
+      <label>消费金额：</label>
       <input value='{{count}}' placeholder='请输入消费金额' type="digit" name="count"></input>
     </view>
 
     <!-- 发生日期 -->
     <picker name="date" mode="date" bindchange="bindDateChange" value="{{date}}">
       <view class="picker_container">
-        <label>消费日期:</label>
+        <label>消费日期：</label>
         <text>{{date}}</text>
       </view>
     </picker>
     
     <!-- 小账说明 -->
     <view class='picker_container'>
-      <label>备注:</label>
-      <textarea name="remarks" class='flex1 input-text input-textarea' value='{{remarks}}' placeholder="对小账的说明，如：住宿" />
+      <label>备注：</label>
+      <textarea name="remarks" class='flex1 input-text input-textarea' value='{{remarks}}' placeholder="对小账的说明，如:住宿" />
     </view>
 
     <!-- 保存按钮 -->
@@ -38,8 +46,10 @@
       <text class='button-text'>保存</text>
     </button>
 
-    <!--语音输入按钮-->
-    <button bindtouchstart='finger_touch_begin' bindtouchend="finger_touch_stop">语音记账</button>
+      <!--语音输入按钮-->
+    <button bindtouchstart='finger_touch_begin' bindtouchend="finger_touch_stop" class="button button-voice">
+      <text class="voice-text">语音记账</text>
+    </button>
 
 
   </form>

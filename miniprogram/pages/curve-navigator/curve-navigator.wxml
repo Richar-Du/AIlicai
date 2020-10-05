@@ -1,0 +1,13 @@
+<view class="index">
+  <view class="title">
+    <text>请选择</text>
+  </view>
+  <view class="button_container">
+		<navigator url="/pages/curve/curve?id=jtcx">
+			<button class="choice">交通出行</button>
+		</navigator>
+    <navigator url="/pages/curve/curve?id=jjwy">
+    	<button class="choice">居家物业</button>
+		</navigator>
+  </view>
+</view>
