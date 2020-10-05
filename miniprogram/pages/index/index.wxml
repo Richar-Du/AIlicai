@@ -6,7 +6,7 @@
   <view class='page-center'>
     <view class='logo-wrapper'>
       <image class='logo' src='../../images/logo.jpeg'></image>
-      <text class='name'>松鼠理财</text>
+      <text class='name'>松鼠钱钱</text>
     </view>
     <!-- 需要使用 button 来授权登录 -->
     <button class='button' wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">
