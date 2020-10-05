@@ -81,11 +81,20 @@ Page({
           },
           method: 'POST',
           success: (res) => {
-            console.log('res',res.data['result'][0].replace("。",""))
-            // that.setData({
-            //   sound_text:res.data
-            // })
             wx.hideLoading()
+            if(res){
+              console.log('res',res.data['result'][0].replace("。",""))
+              that.setData({
+                sound_text:res.data['result'][0].replace("。","")
+              })
+              that.splitText(res.data['result'][0].replace("。",""))
+            }
+            else{
+              wx.showToast({
+                title: '未检测到有效语音，请重新输入',     
+                duration: 2000,
+              })
+            }
           },
           fail: (res) => {
             console.log("识别失败")
@@ -94,6 +103,73 @@ Page({
         })
       }
     })
+  },
+  fill_inout:function(io){
+    this.setData({
+      inOutValue: io
+    })
+    // 根据收支类型变化动态给收支小类赋值
+    if (this.data.types[io].value == 0) {
+      this.setData({
+        actualTypesForDisplay: this.data.expenditureTypesForDisplay,
+        actualTypes: this.data.expenditureTypes
+      })
+    } else {
+      this.setData({
+        actualTypesForDisplay: this.data.incomeTypesForDisplay,
+        actualTypes: this.data.incomeTypes
+      })
+    }
+  },
+  fill_type:function(type){
+    this.setData({
+      typeValue: type
+    })
+  },
+  fill_count:function(count){
+    this.setData({
+      count: count
+    })
+  },
+  fill_note:function(note){
+    this.setData({
+      remarks: note
+    })
+  },
+  splitText:function(text){
+    var type = text.slice(0,4)
+    //支出为0，收入为1
+    var inout = 0
+    var info = text.slice(4)
+    info = info.split('元',2)
+    var count = parseInt(info[0])
+    var note = info[1]
+    var ex_type = this.data.expenditureTypesForDisplay;
+    var in_type = this.data.incomeTypesForDisplay;
+    //判断收支类型及账目类型
+    var e_index = ex_type.indexOf(type)
+    var i_index = in_type.indexOf(type)
+    if(e_index != -1){
+      inout = 0
+      this.fill_inout(inout)
+      this.fill_type(e_index)
+      this.fill_count(count)
+      this.fill_note(note)
+    }
+    else if(i_index != -1){
+      inout = 1
+      this.fill_inout(inout)
+      this.fill_type(i_index)
+      this.fill_count(count)
+      this.fill_note(note)
+    }else{
+      //如果种类既不在已有的支出种类，又不在已有的收入种类，那么默认为支出种类
+      inout = 0
+      this.fill_inout(inout)
+      this.fill_type(this.data.actualTypesForDisplay.length-1)
+      this.fill_count(count)
+      this.fill_note(note)
+    }
   },
   // 松开按钮结束录音
   finger_touch_stop() {
