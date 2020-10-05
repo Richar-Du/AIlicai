@@ -10,8 +10,10 @@
 .stratergy{
 	padding-top: 20vh;
   text-align: center;
+
   color: white;
   text-shadow: 0 0 20px rgb(41, 84, 204);
+  color: whitesmoke;
   font-size: 60rpx;
 }
 .recommendation{

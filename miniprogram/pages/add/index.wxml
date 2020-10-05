@@ -6,7 +6,7 @@
         <text>手动记账</text>
 </view>
 
-<view class="book-add">
+<view class="book-add" style="margin-top:60rpx">
   <form bindsubmit="formSubmit">
     <picker range="{{types}}" range-key="name" bindchange="chooseInOut" value="{{inOutValue}}">
       <view class="picker_container">
@@ -22,8 +22,9 @@
       </view>
     </picker>
 
-    <view class="input_container">
-      <label>消费金额：</label>
+
+    <view class="input_container,input">
+      <label>消费金额:</label>
       <input value='{{count}}' placeholder='请输入消费金额' type="digit" name="count"></input>
     </view>
 
@@ -36,9 +37,9 @@
     </picker>
     
     <!-- 小账说明 -->
-    <view class='picker_container'>
-      <label>备注：</label>
-      <textarea name="remarks" class='flex1 input-text input-textarea' value='{{remarks}}' placeholder="对小账的说明，如:住宿" />
+    <view class='picker_container,input'>
+      <label>备注:</label>
+      <textarea name="remarks" class='flex1 input-text input-textarea' value='{{remarks}}' placeholder="对小账的说明，如：住宿" />
     </view>
 
     <!-- 保存按钮 -->
