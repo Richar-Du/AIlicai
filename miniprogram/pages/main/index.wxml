@@ -54,6 +54,9 @@
 			<view>事项</view>
 			<view>额度</view>
 		</view>		
+    <view>
+      <image class='background' src="../../images/squirrel.jpg" mode="aspectFill"></image>
+    </view>
 		<scroll-view scroll-y="{{true}}" class="records">
 			<block wx:for="{{records}}" wx:key="index" >
 				<view wx:if="{{item.money<0}}" class="body">
