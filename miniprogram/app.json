@@ -50,13 +50,21 @@
 				"pagePath": "pages/market/market",
 				"text": "超市",
 				"iconPath": "images/market.png",
+<<<<<<< HEAD
 				"selectedIconPath": "images/market1.png"
+=======
+				"selectedIconPath": "images/market.png"
+>>>>>>> 0bd0d250b94f0e721a0f4f0fa9e08a50ebbea07a
 			},
 			{
 				"pagePath": "pages/questionnaire/questionnaire",
 				"text": "问卷",
 				"iconPath": "images/questionnaire.png",
+<<<<<<< HEAD
 				"selectedIconPath": "images/questionnaire1.png"
+=======
+				"selectedIconPath": "images/questionnaire.png"
+>>>>>>> 0bd0d250b94f0e721a0f4f0fa9e08a50ebbea07a
 			}
 		]
 	},

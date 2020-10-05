@@ -31,6 +31,7 @@ page {
   background-color: #87CEEB; 
 }
 .strategy{
+<<<<<<< HEAD
   padding-top: 15vh;
   text-align: center;
   color: white;
@@ -38,5 +39,14 @@ page {
 }
 .questionare-result{
   margin-top: 200rpx;
+=======
+  padding-top: 20vh;
+  text-align: center;
+  color: whitesmoke;
+  font-size: 60rpx;
+}
+.questionare-result{
+  margin-top: 110rpx;
+>>>>>>> 0bd0d250b94f0e721a0f4f0fa9e08a50ebbea07a
   width: 50%;
 }

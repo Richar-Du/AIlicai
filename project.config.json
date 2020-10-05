@@ -108,6 +108,7 @@
 					"id": -1,
 					"name": "questionare-result",
 					"pathName": "pages/questionare-result/questionare-result",
+<<<<<<< HEAD
 					"query": "",
 					"scene": null
 				},
@@ -115,6 +116,8 @@
 					"id": -1,
 					"name": "pages/market/market",
 					"pathName": "pages/market/market",
+=======
+>>>>>>> 0bd0d250b94f0e721a0f4f0fa9e08a50ebbea07a
 					"scene": null
 				}
 			]
