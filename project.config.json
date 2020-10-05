@@ -25,7 +25,7 @@
 			"outputPath": ""
 		},
 		"useIsolateContext": true,
-		"useCompilerModule": false,
+		"useCompilerModule": true,
 		"userConfirmedUseCompilerModuleSwitch": false
 	},
 	"appid": "wxdec5c029a674083d",
@@ -108,16 +108,20 @@
 					"id": -1,
 					"name": "questionare-result",
 					"pathName": "pages/questionare-result/questionare-result",
-<<<<<<< HEAD
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
-					"name": "pages/market/market",
-					"pathName": "pages/market/market",
-=======
->>>>>>> 0bd0d250b94f0e721a0f4f0fa9e08a50ebbea07a
+					"name": "curve-navigator",
+					"pathName": "pages/curve-navigator/curve-navigator",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "statistics",
+					"pathName": "pages/statistics/index",
 					"scene": null
 				}
 			]

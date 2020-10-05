@@ -30,6 +30,7 @@
 }
 
 .curve{
+  margin-top: 50rpx;
   background: #48577f;
   width:50%
 }

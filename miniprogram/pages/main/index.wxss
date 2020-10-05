@@ -173,13 +173,17 @@
   width: 100%;
 }
 .head{
-  background-color: pink;
+  /* background-color: pink; */
+  padding-top: 15rpx;
+  height: 90rpx;
   display: flex;
   flex-direction: row; 
   text-align: center;
+  font-size: 50rpx;
 }
 .body{
   display: flex;
   flex-direction: row;
   text-align: center;
+  padding-bottom: 10rpx;
 }

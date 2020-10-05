@@ -27,7 +27,9 @@ Page({
     remarks: null,
     submitEnable:true,
     recordBase64:null,
-    recordSize:0
+    recordSize:0,
+    input:0,
+    output:0
   },
   // 按下按钮开始录音
   finger_touch_begin:function() {    
@@ -205,10 +207,13 @@ Page({
     this.setData({
       typeValue: e.detail.value
     })
+    console.log("e.detail.value是",e.detail.value)
+
   },
 
   // 提交表单
   formSubmit(e) {
+    let _this=this
     if (!this.data.submitEnable){
       return
     }
@@ -223,26 +228,32 @@ Page({
     if (inout == 0){
       consume_num *= -1
     }
+    else{
+      consume_num *= 1
+    }
     let consume_date = e.detail.value.date
     let consume_remarks = e.detail.value.remarks
-
+    console.log("e.detail是：",e.detail)
     wx.showLoading({
       title: '正在保存',
     })
     db.collection(consume_type).add({
       data:{
         "money":consume_num,
-        "date":consume_date,
+        "date":new Date(consume_date),
         "notes":consume_remarks
       }
     })
+    console.log(_this.data.actualTypesForDisplay)
     db.collection('zhangbu').add({
       data:{
         "money":consume_num,
-        "date":new Date(),
-        "notes":consume_remarks
+        "date":new Date(consume_date),
+        "notes":consume_remarks,
+        "type":_this.data.actualTypesForDisplay[_this.data.typeValue]
       }
     })
+    console.log("类型",_this.data.actualTypesForDisplay[_this.data.typeValue])
     wx.hideLoading()
     wx.showToast({
       title: '保存成功',
@@ -259,5 +270,11 @@ Page({
     let month = time.getMonth() + 1
     let date = time.getDate()
     return `${time.getFullYear()}-${month<10?'0'+month:month}-${date<10?'0'+date:date}`
+  },
+  bindDateChange: function(e){
+    console.log(e.detail)
+    this.setData({
+      date:e.detail.value
+    })
   }
 })

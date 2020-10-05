@@ -63,7 +63,6 @@
   font-size: 38rpx;
 }
 
-<<<<<<< HEAD
 .button-voice {
   margin: 100rpx 80rpx; 
 }
@@ -74,9 +73,8 @@
   color: rgba(255, 255, 255, 1);
   line-height: 56rpx;
  }
-=======
+
 .input {
   margin-bottom: 30rpx;
   margin-left:30rpx
 }
->>>>>>> 0bd0d250b94f0e721a0f4f0fa9e08a50ebbea07a
