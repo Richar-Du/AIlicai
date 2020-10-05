@@ -1,15 +1,14 @@
 const app = getApp()
 const db = wx.cloud.database();
 const jtcx = db.collection("jtcx");
+const zhangbu=db.collection("zhangbu")
 Page({
   data: {
     userInfo: {},
     records: [],
-    data: {
-      income: 50, // 收入
-      expenditure: 30, // 支出
-      diffCount: 0 // 
-    },
+    income: 0, // 收入
+    expenditure: 0, // 支出
+    diffCount: 0, //
     delBtnWidth: 180,
     startX: "",
     type:'all'
@@ -58,10 +57,32 @@ Page({
     }
     let data = wx.getStorageSync('userInfo')
     let _this = this
+    let input=_this.data.income
+    let output=_this.data.expenditure
     this.setData({
       userInfo: data
     })
     this.getRecordList()
+    zhangbu.where({
+      _openid:app.globalData.openid
+    }).get().then(res=>{
+      console.log("获取结果",res)
+      for (let i=0;i<res.data.length;i++){
+        if(res.data[i].money>0){
+          input+=res.data[i].money
+        }
+        else{
+          output-=res.data[i].money
+        }
+        console.log("1收入:",input,"支出：",output)
+        _this.setData({
+          income:input,
+          expenditure:output,
+          diffCount:input-output
+        })
+        console.log("2收入:",_this.data.income,"支出：",_this.data.expenditure)
+      }
+    })
   },
   /**
 	 * 页面相关事件处理函数--监听用户下拉动作
@@ -165,7 +186,9 @@ Page({
 		wx.showLoading({
 			title: '数据加载中',
 		})
-		jtcx.skip(this.pagedata.skip).get().then(res => {
+		zhangbu.skip(this.pagedata.skip).where({
+
+    }).get().then(res => {
       console.log(res);
       console.log(this.data.records)
 			this.setData({
