@@ -104,6 +104,9 @@ Page({
           answer:answer
         }
       })
+      wx.navigateTo({
+        url: '/pages/questionare-result/questionare-result',
+      })
     }
   },
   navToResult:function(e){

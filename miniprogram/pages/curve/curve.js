@@ -193,7 +193,7 @@ function initChart(canvas, width, height, dpr,) {
 			},
 			yAxis: {
 				type: 'value',
-						name: '收入/元',
+						name: '支出/元',
 						nameTextStyle: {
 							color: 'white',
 							fontWeight: 'normal',
@@ -269,7 +269,7 @@ function initChart(canvas, width, height, dpr,) {
 						shadowBlur: 20
 					}
 				},
-				name: '本年收入情况',
+				name: '本年支出情况',
 				type: 'line',
 				data: output,
 			}]

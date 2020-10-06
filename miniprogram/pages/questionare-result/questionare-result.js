@@ -11,7 +11,7 @@ Page({
 		active:0,
 		robust:0,
 		conservative:0,
-		stratergy:0
+		stratergy:0,	
 	},
 
 	/**
