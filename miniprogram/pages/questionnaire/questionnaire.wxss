@@ -31,12 +31,17 @@ page {
   background-color: #87CEEB; 
 }
 .strategy{
-  padding-top: 20vh;
+  padding-top: 15vh;
   text-align: center;
-  color: whitesmoke;
+  color: white;
   font-size: 60rpx;
 }
 .questionare-result{
+  margin-top: 200rpx; 
+   width:50%;
+}
+.questionare-result{
   margin-top: 110rpx;
+  margin-top: 200rpx;
   width: 50%;
 }

@@ -3,11 +3,41 @@
     <text>请选择</text>
   </view>
   <view class="button_container">
-		<navigator url="/pages/curve/curve?id=jtcx">
-			<button class="choice">交通出行</button>
+		<navigator url="/pages/curve/curve?id=yfsp">
+			<button class="choice">衣服饰品</button>
+		</navigator>
+    <navigator url="/pages/curve/curve?id=cysg">
+    	<button class="choice">餐饮蔬果</button>
+		</navigator>
+    <navigator url="/pages/curve/curve?id=lsyj">
+			<button class="choice">零食烟酒</button>
 		</navigator>
     <navigator url="/pages/curve/curve?id=jjwy">
-    	<button class="choice">居家物业</button>
+    	<button class="choice">家居物业</button>
+		</navigator>
+    <navigator url="/pages/curve/curve?id=jtcx">
+			<button class="choice">交通出行</button>
+		</navigator>
+    <navigator url="/pages/curve/curve?id=ylyy">
+    	<button class="choice">医疗医药</button>
+		</navigator>
+    <navigator url="/pages/curve/curve?id=mrmf">
+			<button class="choice">美容美发</button>
+		</navigator>
+    <navigator url="/pages/curve/curve?id=txhf">
+    	<button class="choice">通讯话费</button>
+		</navigator>
+    <navigator url="/pages/curve/curve?id=gwyl">
+			<button class="choice">购物娱乐</button>
+		</navigator>
+    <navigator url="/pages/curve/curve?id=dzsm">
+    	<button class="choice">电子数码</button>
+		</navigator>
+    <navigator url="/pages/curve/curve?id=ydjs">
+			<button class="choice">运动健身</button>
+		</navigator>
+    <navigator url="/pages/curve/curve?id=xxbg">
+    	<button class="choice">学习办公</button>
 		</navigator>
   </view>
 </view>

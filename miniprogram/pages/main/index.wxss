@@ -1,4 +1,12 @@
 @import '../../style/guide.wxss';
+.background {
+  width: 100%;
+  height: 70%;
+  position:fixed; 
+  background-size:80% 80%;
+  z-index: -1;
+  opacity: 0.4;
+}
 
 .book-main {
   background: rgba(135, 206, 235,0.6);
@@ -7,16 +15,16 @@
 }
 
 .avatar {
-  width: 180rpx;
-  height: 180rpx;
+  width: 140rpx;
+  height: 140rpx;
   border-radius: 50%;
   text-align: center;
 }
 
 .avatarBox {
   display: inline-block;
-  width: 180rpx;
-  height: 180rpx;
+  width: 140rpx;
+  height: 140rpx;
   border-radius: 50%;
   text-align: center;
   overflow: hidden;
@@ -24,7 +32,7 @@
 
 .balance-wrapper {
   color: #fff;
-  font-size: 40rpx;
+  font-size: 39rpx;
   font-weight: 400;
 }
 
@@ -44,14 +52,14 @@
 }
 
 .menu-wrapper {
-  margin-top: 20rpx;
-  padding-bottom: 20rpx;
+  margin-top: 10rpx;
+  padding-bottom: 10rpx;
   border-bottom: 2rpx solid #ebebeb;
 }
 
 .menu-img {
-  width: 80rpx;
-  height: 80rpx;
+  width: 65rpx;
+  height: 65rpx;
 }
 
 .menu-name {
@@ -107,10 +115,6 @@
 
 .date-expenditure {
   margin-left: 10rpx;
-}
-
-.record-count {
-  /* color: #87CEEB; */
 }
 
 .price-down {
@@ -173,13 +177,23 @@
   width: 100%;
 }
 .head{
-  background-color: pink;
+  background-color: rgb(241, 177, 188);
   display: flex;
   flex-direction: row; 
   text-align: center;
+  border-radius: 5%;
+  border-style: inset;
+  border-width: 3rpx;
+  padding: 6rpx;
+  color: white;
+  font-size: 45rpx;
 }
 .body{
   display: flex;
   flex-direction: row;
   text-align: center;
+  padding-bottom: 10rpx;
+  border-style:solid;
+  border-color: rgba(243, 239, 239, 0.753);
+  border-width: 1rpx
 }

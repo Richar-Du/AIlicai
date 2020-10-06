@@ -23,6 +23,10 @@ page {
   border-width: 2rpx;
   border-style: solid;
   background-color: #fff;
+	border: 2px solid #e2e2e2;
+	padding: 7px;
+	position: relative;
+  border-radius: 8px;
 }
 
 .zzl {
@@ -41,7 +45,12 @@ page {
 
 .type {
   margin-left: 70rpx;
+  border-radius: 15%;
+  border-style: outset;
+  border-width: 4rpx;
+  padding: 6rpx;
   border-radius: 50%;
   border-style: solid;
   border-width: 2rpx;
+
 }

@@ -1,6 +1,7 @@
 // pages/statistics2/index.js
 import * as echarts from '../../ec-canvas/echarts';
 
+const app =getApp()
 const db = wx.cloud.database()
 const axcs=db.collection('axcs')
 const cysg=db.collection('cysg')
@@ -117,14 +118,45 @@ function initChart(canvas, width, height, dpr,) {
 	let output=[0,0,0,0,0,0,0,0,0,0,0,0];
 	var collection_name=null;
 	switch(pageInstance.data.collection_name){
-		case 'jtcx':
-			collection_name=jtcx
+		case 'yfsp':
+			collection_name=yfsp
+			break;
+		case 'cysg':
+			collection_name=cysg
+			break;
+		case 'yjls':
+			collection_name=yjls
 			break;
 		case 'jjwy':
 			collection_name=jjwy
+			break;
+		case 'jtcx':
+			collection_name=jtcx
+			break;
+		case 'ylyy':
+			collection_name=ylyy
+			break;
+		case 'mrmf':
+			collection_name=mrmf
+			break;
+		case 'txhf':
+			collection_name=txhf
+			break;
+		case 'gwyl':
+			collection_name=gwyl
+			break;
+		case 'dzsm':
+			collection_name=dzsm
+			break;
+		case 'ydjs':
+			collection_name=ydjs
+			break;
+		case 'xxbg':
+			collection_name=xxbg
+			break;
 	}
 	collection_name.where({
-		_openid:"oyRnK5ZTqxOOlUArqGrqZS22RIqQ"
+		_openid:app.globalData.openid
 	}).get().then(res=>{
 		for(let i=0;i<res.data.length;i++){
 			var consume_month=res.data[i].date.getMonth()		//获取月份

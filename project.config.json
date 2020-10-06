@@ -108,6 +108,27 @@
 					"id": -1,
 					"name": "questionare-result",
 					"pathName": "pages/questionare-result/questionare-result",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "curve-navigator",
+					"pathName": "pages/curve-navigator/curve-navigator",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "statistics",
+					"pathName": "pages/statistics/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pie",
+					"pathName": "pages/statistics/index",
 					"scene": null
 				}
 			]

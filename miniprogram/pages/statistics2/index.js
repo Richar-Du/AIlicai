@@ -1,6 +1,7 @@
 // pages/statistics2/index.js
 import * as echarts from '../../ec-canvas/echarts';
 
+const app=getApp()
 const db = wx.cloud.database()
 const jtcx = db.collection('jtcx')
 const jjwy = db.collection('jjwy')
@@ -20,7 +21,7 @@ function initChart(canvas, width, height, dpr) {
   let categories=[jtcx,jjwy,cysg,yfsp];
     for (let category=0;category < categories.length; category++){  //遍历每一个账簿
       categories[category].where({
-        _openid:"oyRnK5ZTqxOOlUArqGrqZS22RIqQ"    //根据openid找到这个用户
+        _openid:app.globalData.openid    //根据openid找到这个用户
       }).get().then(res=>{
         console.log(res.data);    //  该账簿下该用户的数据
         for (let i=0;i<res.data.length;i++){
