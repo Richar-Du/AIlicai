@@ -68,17 +68,22 @@ Page({
     }
     const code = this.data.lastcode
     for (var j=0;j<code.length;j++) {
-      wx.request({
-        url: 'https://www.ywonchall.top:90/', //仅为示例，并非真实的接口地址
+       var code2 = code[j].toString()
+       wx.request({
+        url: "https://fundgz.1234567.com.cn/js/"+code2+".js", //仅为示例，并非真实的接口地址
         data: {
-          code:code[j]
+         
         }, 
-        method:'POST',
+        method:'GET',
         header: {
-          'content-type': 'application/json' // 默认值
+          'content-type': 'application/json', // 默认值
         },
         success (res) {
-          const data = res.data
+          console.log(res)
+          var data0 = res.data.replace("jsonpgz(","")
+          var data0 = data0.replace(");", "")
+          console.log(data0)
+          const data = JSON.parse(data0)
           data['gszzl'] = parseFloat(data['gszzl'])
           const fundcode = data['fundcode']
           data['type'] = types[fundcode]
@@ -86,10 +91,10 @@ Page({
           items.push(data)
           _this.setData({
             fund:items
-          })
+          }) 
         }
-      })
-    }
+      }) 
+    };
     _this.setData({
       fund:items
     })
