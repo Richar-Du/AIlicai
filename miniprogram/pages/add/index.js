@@ -252,6 +252,8 @@ Page({
         "notes":consume_remarks,
         "type":_this.data.actualTypesForDisplay[_this.data.typeValue]
       }
+    }).then(res=>{
+      console.log('存到账簿里',res)
     })
     console.log("类型",_this.data.actualTypesForDisplay[_this.data.typeValue])
     wx.hideLoading()

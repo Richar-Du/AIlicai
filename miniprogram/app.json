@@ -54,7 +54,7 @@
 			},
 			{
 				"pagePath": "pages/questionnaire/questionnaire",
-				"text": "问卷",
+				"text": "评测",
 				"iconPath": "images/questionnaire.png",
 				"selectedIconPath": "images/questionnaire1.jpg"
 			}
